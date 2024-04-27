@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.best-seller-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.best-seller-header{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.best-seller-header h2{
+    font-size: 2.5em;
+}
+
+.category-nav{
+    margin: 32px;
+}
+
+.best-seller-content{
+    width: 70%;
+    text-align: center;
+}
+
+.best-seller-content>div{
+    display: none;
+}
+
+.best-seller-content >div>div{
+    display: inline-block;
+    padding: 24px;
+    width: 24%;
+    text-align: center;
+    line-height: 28px;
+}
+
+.best-seller-content img{
+    max-width: 100%;
+}
+
+.best-seller-content label{
+    padding: 16px;
+    background-color: #f4f4f4;
+    display: inline-block;
+    margin: 16px 0 16px 0;
+    font-size: 20px;
+}
+
+.best-seller-content label:hover{
+    background-color: #29378d;
+    color: #fff;
+}
+
+#skincare:checked ~ .skincare-category{
+    display: block;
+}
+
+#haircare:checked ~ .haircare-category{
+    display: block;
+}
+
+#case:checked ~ .case-category{
+    display: block;
+}
+
+#fragrance:checked ~ .fragrance-category{
+    display: block;
+}
+
+#makeup:checked ~ .makeup-category{
+    display: block;
+}
+
+
+#skincare5{
+    display: none;
+}
+
+.img-product1-skincare{
+    position: relative;
+}
+
+.img-product1-skincare:hover #skincare1{
+    display: none;
+}
+
+.img-product1-skincare:hover #skincare5{
+    display: block;
+}
+
+.img-product1-skincare .cart-skincare1{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #29388e;
+    color: #fff;
+    padding: 8px;
+    display: none;
+}
+
+.img-product1-skincare .div-action-skincare1{
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 52px;
+    width: 100%;
+    
+}
+
+.div-action-skincare1 span{
+    background-color: #29388e;
+    color: #fff;
+    padding: 12px;
+}
+
+.img-product1-skincare:hover .div-action-skincare1,.img-product1-skincare:hover .cart-skincare1{
+    display: block;
+}

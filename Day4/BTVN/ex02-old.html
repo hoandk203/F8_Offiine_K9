@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ex02-old.css">
+    <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+</head>
+<body>
+    <!-- Đầu trang -->
+    <header></header>
+    <!-- Thân trang -->
+    <main>
+        <!-- Form đặt bàn -->
+        <section class="booking-form">
+            <div class="form-header">
+                <h2>RESERVATION</h2>
+                <p>Book your table</p>
+            </div>
+            <div class="form-content">
+                <form id="booking-form" action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                    <table>
+                        <tr>
+                            <td>
+                                <input name="name" type="text" placeholder="NAME">
+                            </td>
+                            <td>
+                                <input name="email" type="text" placeholder="EMAIL">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="date" type="text" placeholder="DATE">
+                            </td>
+                            <td>
+                                <input name="time" type="text" placeholder="TIME">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="people" type="text" placeholder="PEOPLE">
+                            </td>
+                            <td>
+                                <button type="submit">Find A Table</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Chân trang -->
+    <footer></footer>
+</body>
+</html>
