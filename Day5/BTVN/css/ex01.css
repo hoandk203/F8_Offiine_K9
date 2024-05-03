@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: 0 10rem 0 10rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.background-image img{
+    width: 100%;
+}
+
+.background-image{
+    position: relative;
+}
+
+.blurred-background{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 25%;
+    left: 41%;
+    width: 32%;
+    height: 32%;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blurred-background p{
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.blurred-background p:first-child{
+    font-size: 1.6rem;
+}
+
+.blurred-background a{
+    color: #000;
+}
+

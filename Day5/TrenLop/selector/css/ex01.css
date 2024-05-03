@@ -1,0 +1,70 @@
+/* 
+selector:not(selector2) -> loai tru selector khong muon css
+*/
+
+/* ul li:not(.active, .light){
+    color: red;
+} */
+
+
+/* --------------------------------------------- */
+/* 
+first-child: chon thanh phan con dau tien, bat ke la the gi
+last-child: chon thanh phan con cuoi cung, bat ke la the gi
+first-of-type: chon thanh phan con dau tien, dung' the
+last-of-type: chon thanh phan con cuoi cung, dung' the
+*/
+
+/* ul li:first-child{
+    color: red;
+}
+
+ul li:last-child{
+    color: green;
+}
+
+ul li:first-of-type{
+    color: red;
+}
+
+ul li:last-of-type{
+    color: green;
+} */
+
+
+/* ---------------------------------------------------- */
+/* 
+nth-child(n): chon phan tu con thu n, bat ke the gi
+nth-of-type(n): chon phan tu con thu n, chi chon the muon selector
+*/
+
+/* ul li:nth-child(2n+1){
+    color: red;
+}
+
+ul li:nth-of-type(5){
+    color: green;
+} */
+
+
+/* ------------------------------------------------ */
+/* 
+ */
+
+
+ .checkbox input:checked ~ span{
+    color: red;
+ }
+ .checkbox input:checked:disabled ~ span{
+    color: green;
+ }
+
+
+
+ /* -------------------------------------- */
+/* 
+selector:valid -> chon phan tu co value (bat buoc the co required)
+*/
+ .name:valid{
+    background-color: red;
+ }
