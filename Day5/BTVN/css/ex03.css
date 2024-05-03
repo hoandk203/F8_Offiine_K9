@@ -13,25 +13,24 @@ html{
     padding-top: 2rem;
 }
 
-.margin-left-right{
-    margin: 0 2rem 0 2rem;
-    align-items: center;
-}
-
 .container{
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .services-header{
     text-align: center;
-    margin-bottom: 4rem;
-    line-height: 1.5;
+    margin-bottom: 8rem;
+    line-height: 2;
+}
+
+.services-header h2{
+    font-size: 3.2rem;
 }
 
 .services-header p{
-    font-size: 0.8rem;
+    font-size: 1.6rem;
 }
 
 .services-content{
@@ -40,34 +39,34 @@ html{
 }
 
 .content{
-    display: inline-block;
     width: 31%;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    padding: 2rem;
+    padding: 3.2rem 3.2rem 6rem 3.2rem;
     text-align: center;
     line-height: 1.5;
 }
 
+
 .content-icon{
     border: 1px solid #f2a93b;
-    padding: 1.5rem;
+    padding: 2.8rem;
     border-radius: 50%;
-    width: 40%;
+    width: 45%;
     margin: 0 auto 0 auto;
     color: #f2a93b;
-    font-size: 2.8rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
 }
 
 .content-title{
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
 }
 
 .content-description{
-    font-size: 0.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
     color: rgba(0,0,0,0.5);
 }
 
@@ -76,6 +75,6 @@ html{
     color: #fff;
     text-decoration: none;
     background-color: #f2a93b;
-    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
-    font-size: 0.8rem;
+    padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+    font-size: 1.6rem;
 }
