@@ -1,0 +1,12 @@
+.test{
+    height: 700px;
+    width: 50%;
+    background-color: aqua;
+    background-image: url(https://fastly.picsum.photos/id/884/500/500.jpg?hmac=IviKntbKgmD9S_rfCKPNXN_DEojYj6QUOE3L-eGsRH0);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-attachment: scroll;
+
+    
+}
