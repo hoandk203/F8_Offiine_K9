@@ -8,11 +8,16 @@ html{
     font-size: 62.5%;
 }
 
-select {
-    -webkit-appearance: none;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
-  textarea {
+select{
+    -webkit-appearance: none;
+}
+
+textarea{
     resize: none;
 }
 
