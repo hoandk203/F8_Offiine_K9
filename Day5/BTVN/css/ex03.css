@@ -36,7 +36,9 @@ html{
 .services-content{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 
 .content{
     width: 31%;
@@ -44,18 +46,21 @@ html{
     padding: 3.2rem 3.2rem 6rem 3.2rem;
     text-align: center;
     line-height: 1.5;
+    min-width: 200px;
 }
 
 
 .content-icon{
-    border: 1px solid #f2a93b;
-    padding: 2.8rem;
-    border-radius: 50%;
-    width: 45%;
     margin: 0 auto 0 auto;
     color: #f2a93b;
     font-size: 4rem;
     margin-bottom: 1.5rem;
+}
+
+.content-icon > i{
+    border: 1px solid #f2a93b;
+    padding: 1em;
+    border-radius: 50%;
 }
 
 .content-title{
@@ -68,6 +73,11 @@ html{
     font-size: 1.6rem;
     margin-bottom: 4rem;
     color: rgba(0,0,0,0.5);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 
