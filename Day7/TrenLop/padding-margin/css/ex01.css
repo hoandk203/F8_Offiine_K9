@@ -1,0 +1,18 @@
+/* 
+padding cách nội dung với border
+Khi dùng đơn vị % cho padding thì padding theo width của thẻ cha
+padding không hoạt động với inline
+không hỗ trợ giá trị âm và auto
+*/
+
+.box{
+    border: 1px solid red;
+    width: 300px;
+    aspect-ratio: 4/3;
+}
+
+a{
+    background-color: green;
+    padding: 16px;
+    /* display: inline-block; */
+}
