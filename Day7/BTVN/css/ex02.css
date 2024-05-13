@@ -8,8 +8,7 @@ body{
     font-family: "Nunito", sans-serif;
     background-image: url(../img/login-bg2.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: bottom;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -23,14 +22,6 @@ a{
 
 input{
     display: block;
-}
-
-hr{
-    background-color: #ff574d;
-    border: none;
-    height: 1px;
-    width: 30%;
-    margin: 20px auto;
 }
 
 .form{
@@ -94,10 +85,17 @@ hr{
 .form-right-header{
     text-align: center;
     color: #272323;
+    margin-bottom: 24px;
 }
 
 .form-right-header span{
     color: #ff574d;
+}
+
+.bottom-outline{
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 1px solid red;
 }
 
 .form-right input{
@@ -138,6 +136,7 @@ hr{
     padding: 16px;
     cursor: pointer;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .form-right-footer{
