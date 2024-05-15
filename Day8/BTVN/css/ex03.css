@@ -41,7 +41,7 @@ html{
     margin: 0 8px 8px;
 }
 
-.popular-province ul li a{
+.province{
     display: inline-block;
     color: #000;
     text-decoration: none;
@@ -51,7 +51,12 @@ html{
     text-align: center;
 }
 
-.popular-province ul li a:hover{
+.province:hover{
+    background-color: #af7b38;
+    color: #fff;
+}
+
+.active{
     background-color: #af7b38;
     color: #fff;
 }
