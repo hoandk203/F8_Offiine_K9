@@ -1,0 +1,14 @@
+/* 
+display
+visibility
+opacity
+
+filter:
+filter: opacity(number)
+filter: grayscale(number)
+filter: blur(px)
+*/
+
+h1{
+    display: none;
+}

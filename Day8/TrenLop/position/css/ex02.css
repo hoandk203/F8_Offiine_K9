@@ -1,0 +1,51 @@
+/* 
+position: thay doi vi tri cac the html
+static: mac dinh
+relative: tuong doi voi vi tri ban dau, khong thay doi bo cuc
+absolute: tuyet doi
+fixed: co dinh khi keo thanh cuon
+
+cac thuoc tinh khi kich hoat position
+- top
+- right
+- bottom
+- left
+- z-index
+- inset
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    border: 1px solid red;
+    position: relative;
+}
+
+.item{
+    background-color: green;
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #fff;
+}
+
+.item:nth-child(2){
+    position: relative;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.item:nth-child(3){
+    position: relative;;
+    z-index: 1;
+
+}
