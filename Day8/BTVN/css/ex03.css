@@ -51,8 +51,9 @@ html{
     text-align: center;
 }
 
-.province{
-    
+.popular-province ul li a:hover{
+    background-color: #af7b38;
+    color: #fff;
 }
 
 .province-name{
