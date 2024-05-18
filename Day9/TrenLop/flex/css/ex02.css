@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 50px;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+}
+
+.item img{
+    width: 100%;
+}
