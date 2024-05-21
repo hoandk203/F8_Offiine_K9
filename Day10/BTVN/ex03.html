@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3</title>
+    <link rel="stylesheet" href="css/ex03.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h2>Drop Us a Line</h2>
+                <p>Reach out to us from our contact form and we will get back to you shortly.</p>
+            </div>
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                <div class="form">
+                    <div class="row">
+
+                        <!-- item 1 -->
+                        <div class="item">
+                            <label class="form-input">
+                                <input type="text" name="firstname" placeholder="...">
+                                <div class="input-placeholder">
+                                    First Name *
+                                </div>
+                            </label>
+                        </div>
+        
+                        <!-- item 2 -->
+                        <div class="item">
+                            <label class="form-input">
+                                <input type="text" name="lastname" placeholder="...">
+                                <div class="input-placeholder">
+                                    Last Name *
+                                </div>
+                            </label>
+                        </div>
+        
+                        <!-- item 3 -->
+                        <div class="item">
+                            <label class="form-input">
+                                <input type="email" name="email" placeholder="...">
+                                <div class="input-placeholder">
+                                    Email *
+                                </div>
+                            </label>
+                        </div>
+        
+                        <!-- item 4 -->
+                        <div class="item">
+                            <label class="form-select">
+                                <select name="department">
+                                    <option value="sales">Sales</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="cs">Customer Support</option>
+                                </select>
+                                <div class="dropdown-icon"></div>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                        
+                        <!-- item 5 -->
+                        <div class="item item-area">
+                            <label class="form-text-area">
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="..."></textarea>
+                                <div class="input-placeholder">
+                                    Message *
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-btn"><button type="submit">Send message</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/cd5ccb40a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

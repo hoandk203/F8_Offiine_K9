@@ -1,0 +1,159 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    max-width: 1360px;
+    margin: 50px auto;
+}
+
+.content{
+    display: flex;
+
+}
+
+.timeline{
+    width: 100%;
+}
+
+.timeline-item{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.item-left{
+    text-align: right;
+    width: 40%;
+    margin-right: 50px;
+}
+
+.item-left:hover .category{
+    background-color: #a26f5a;
+    color: #fff;
+}
+
+.item-title{
+    font-size: 24px;
+    font-family: "Space Grotesk";
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.item-title::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    right: -40px;
+    top: 5px;
+}
+
+.item-title::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    right: -35px;
+    top: 10px;
+}
+
+.item-text{
+    position: relative;
+    font-size: 1.4rem;
+    font-family: "Inter";
+    line-height: 1.5;
+}
+
+.item-text::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 140%;
+    background-color: #ddd;
+    right: -30px;
+    top: -10px;
+}
+
+.item-text p{
+    margin-bottom: 12px;
+}
+
+.category{
+    padding: 4px 8px;
+    background-color: #ddd;
+    display: inline-block;
+    border-radius: 999px;
+    transition-property:  background-color, color;
+    transition: 0.5s ease;
+}
+
+.date{
+    position: relative;
+    top: 7px;
+}
+
+.image-section{
+    width: 100%;
+    position: relative;
+}
+
+.image-section .image img{
+    width: 100%;
+
+}
+
+.image-section .image:first-child{
+    position: absolute;
+    width: 60%;
+    right: 0;
+    top: 0;
+}
+
+.image-section .image:last-child{
+    position: absolute;
+    width: 30%;
+    right: 50%;
+    top: 20%;
+}
+
+.award{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background-color: #415aaf;
+    color: #fff;
+}
+
+.award div{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.award div p:first-child{
+    font-size: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+}
