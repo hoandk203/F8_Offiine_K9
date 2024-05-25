@@ -8,11 +8,17 @@ body{
     background-color: #313642;
 }
 
+.container{
+    width: 1140px;
+    padding: 100px;
+    margin: 0 auto;
+}
+
 .envelope{
     position: relative;
     width: 320px;
     height: 300px;
-    margin: 20% auto;
+    margin: auto;
     transition: translate 1s ease;
     overflow: hidden;
 }
@@ -22,7 +28,7 @@ body{
     box-shadow: 0 0 55px 10px #000;
     transform: rotateX(70deg);
     transition: all 0.5s ease;
-    margin: 0 auto;
+    margin: 150px auto;
 }
 
 .envelope:hover ~ .shadow{
