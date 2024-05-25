@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+span{
+    display: inline-block;
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+
+.checkbox-frame{
+    width: 30px;
+    height: 30px;
+    border: 3px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .mark{
+    font-weight: bold;
+    color: blue;
+    transform: rotateY(180deg) rotate(-45deg);
+    opacity: 0;
+} */
+
+.mark2{
+    box-sizing: content-box;
+    width: 7px;
+    height: 14px;
+    border: 3px solid blue;
+    border-top: transparent;
+    border-left: transparent;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+
+#check1:checked ~ .mark2{
+    opacity: 1;
+}
+
+#check2:checked ~ .mark2{
+    opacity: 1;
+}
+
+#check3:checked ~ .mark2{
+    opacity: 1;
+}
