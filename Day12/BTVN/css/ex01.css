@@ -52,7 +52,6 @@ a{
     text-align: center;
     align-content: center;
     overflow: hidden;
-    height: 0px;
     transition: height 0.5s ease;
 }
 
@@ -610,8 +609,12 @@ footer a{
     }
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1199px) {
     .mt-m80{
         margin-top: -80px !important;
+    }
+
+    .nav-and-search{
+        height: 0px;
     }
 }
