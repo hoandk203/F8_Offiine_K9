@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: conic-gradient(green calc(var(--rate) * 1%), #ddd 0);
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 5px;
+    left: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+}
+
+.overlay:before{
+    content: attr(data-value);
+}
+
+
+/* 
+tìm hiểu trước: 
+box-shadow, 
+text-shadow, 
+background-gradient, 
+variable
+thứ tự ưu tiên trong css, kế thừa
+thư viện: animate.style, fontawesome
+*/

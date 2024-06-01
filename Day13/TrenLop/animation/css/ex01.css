@@ -1,0 +1,106 @@
+/* 
+- animation tao hieu ung phuc tap
+- viet kich ban cho hieu ung
+- su dung @keyframes
+
+cú pháp @keyframes
+@keyframes tenkeyframes{
+    0%{
+
+    }
+
+    value1%{
+
+    }
+
+    value2%{
+        
+    }
+
+    ...
+
+    100%{
+
+    }
+}    
+
+Cú pháp animation
+- animation-name: tenkeyframes
+- animation-duration: thoigian
+- animation-timing-function: giống transition
+- animation-deley: thời gian trước khi hiệu ứng chạy
+- animation-iteration-count: số lần chạy hiệu ứng (infinite: chạy vô hạn)
+- animation: gộp tất cả thuộc tính
+*/
+
+.box{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid red; */
+    margin: 30px auto;
+    position: relative;
+    
+}
+
+.box span{
+    display: block;
+    
+}
+
+.item1{
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.overflow{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.item2{
+    background-color: yellowgreen;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.item3{
+    width: 300px;
+    height: 300px;
+    translate: 0 -100%;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+.sub1{
+    background-color: #ddd;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 0;
+}
+
+
+/* @keyframes move{
+    0%{
+        rotate:0deg
+    }
+
+    100%{
+        rotate:360deg
+    }
+
+} */

@@ -1,0 +1,111 @@
+@media screen and (min-width: 420px) {
+    .container-420{
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .toggle-btn{
+        min-width: 350px;
+    }
+
+    .welcome-to{
+        font-size: 2.8rem;
+    }
+
+    .page-name{
+        font-size: 10rem;
+    }
+
+    .login-form{
+        padding: 40px;
+    }
+
+    .register-form{
+        padding: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .content{
+        padding-top: 120px;
+    }
+
+    .welcome p:nth-of-type(2){
+        display: block;
+    }
+
+    .rocket{
+        display: block;
+    }
+
+    #login-toggle:checked ~ .viking-form .login-form{
+        /* animation: open-form 1s ease; */
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    /* #login-toggle:checked ~ .viking-form .register-form{
+        position: absolute;
+    } */
+    
+    #register-toggle:checked ~ .viking-form .register-form{
+        /* animation: open-form 1s ease; */
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    /* #register-toggle:checked ~ .viking-form .login-form{
+        position: absolute;
+    } */
+    
+    
+    .register-form{
+        position: absolute;
+        left: 200px;
+        visibility: hidden;
+        display: block;
+        opacity: 0;
+        min-width: 480px;
+    
+        transition: all 0.5s ease;
+    }
+    
+    .login-form{
+        position: absolute;
+        left: 200px;
+        visibility: hidden;
+        opacity: 0;
+        display: block;
+        min-width: 480px;
+    
+        transition: all 0.5s ease;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .vikinger{
+        position: relative;
+    }
+
+    .overlay{
+        width: 60%;
+        height: 130%;
+        border-radius: 50%;
+        position: absolute;
+        right: -25%;
+        top: -15%;
+        background: url(../img/dot-texture.png) repeat 0 0 #fff;
+        pointer-events: none;
+    }
+}
