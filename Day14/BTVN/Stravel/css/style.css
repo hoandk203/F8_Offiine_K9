@@ -566,16 +566,22 @@ footer{
 
 .footer-nav ul li{
     list-style: none;
+    padding: 4px 0 4px;
 }
 
 .footer-nav ul li a{
     display: block;
     color: #AAAAAA;
-    padding: 8px;
+    padding: 4px 0 4px;
+}
+
+.footer-nav ul li a:hover i{
+    margin-right: 10px;
 }
 
 .footer-nav ul li a i{
     color: var(--primary-color);
+    transition: all 0.2s linear;
 }
 
 .footer-row .col-3 h4{

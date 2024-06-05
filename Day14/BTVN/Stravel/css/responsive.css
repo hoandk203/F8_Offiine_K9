@@ -218,6 +218,8 @@
     .credit p{
         padding: 30px;
     }
+
+    
 }
 
 @media screen and (max-width: 420px){
@@ -237,5 +239,10 @@
 
     .slider-container{
         margin-bottom: 220px;
+    }
+    
+    .contact-icon div{
+        width: 30px;
+        height: 30px;
     }
 }
