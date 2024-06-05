@@ -1,0 +1,24 @@
+/* 
+box-shadow: Đổ bóng khối
+Cú pháp: 
+box-shadow: h-offset v-offset blur spread color
+
+text-shadow: đổ bóng văn bản
+Cú pháp:
+
+*/
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    margin: 30px auto;
+    box-shadow: 10px 10px 0px 0px red, 15px 15px green, 20px 20px 0 0 blueviolet;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, -1px 0 0 #000, 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000;
+}
