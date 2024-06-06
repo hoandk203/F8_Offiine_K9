@@ -131,6 +131,10 @@ header{
 -------------SLIDER------------------------------
 ------------------------------------------------ */
 
+#slider{
+    position: relative;
+}
+
 .slider-container{
     background: linear-gradient(rgba(17, 17, 17, .7), rgba(17, 17, 17, .7)), url(../img/home-bg.jpg);
     width: 90%;
@@ -141,7 +145,6 @@ header{
     background-position: center;
     border-radius: 16px;
     position: relative;
-    margin-bottom: 200px;
 }
 
 .slider-text{
@@ -193,9 +196,8 @@ header{
 
 .discount{
     background-color: #fff;
-    width: 90%;
+    width: 85%;
     margin: 0 auto !important;
-    translate: 0 -30%;
     padding: 30px 24px;
     align-items: center;
     border-radius: 8px;
