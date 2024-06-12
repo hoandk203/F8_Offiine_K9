@@ -84,6 +84,10 @@ body {
   font-weight: bold;
 }
 
+header {
+  height: 107px;
+}
+
 .header-row {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -91,8 +95,12 @@ body {
   padding: 14px 20px;
   font-size: 1.6rem;
   box-shadow: 0 5px 10px 0 #dddddd;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #fff;
 }
 .header-row .logo img {
   width: 100%;
