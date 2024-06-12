@@ -1,0 +1,35 @@
+// Định nghĩa các class hay dùng trong dư án
+// VD: .btn, .btn-sm..., .d-lex, .justify-content-start...
+@use "variables";
+
+body{
+    color: variables.$primaryTextColor;
+    font-weight: 500;
+	line-height: 1.5;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.bg-green{
+    background-color: variables.$bgGreen;;
+}
+
+.bg-pink{
+    background-color: #FFF0E7;
+}
+
+.font-bold{
+    font-weight: bold;
+}
