@@ -57,6 +57,7 @@ header{
                         font-weight: 600;
                         position: relative;
                         color: #fff;
+                        transition: all 0.1s linear;
         
                         &:hover{
                             color: variables.$primaryColor;
@@ -219,6 +220,7 @@ header{
                         color: variables.$primaryTextColor;
                         padding: 16px;
                         border-radius: 8px;
+                        transition: all 0.1s linear;
                         
                         &::after{
                             top: 15px;
@@ -234,7 +236,7 @@ header{
                 .header-search{
                     align-content: center;
                     #toggle-header-search:checked ~ div{
-                        height: 54px;
+                        height: 56px;
                     }
 
                     div{

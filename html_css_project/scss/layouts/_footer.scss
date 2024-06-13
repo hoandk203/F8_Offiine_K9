@@ -2,7 +2,6 @@
 
 footer{
     background-color: #F2FFEC;
-    margin-top: 40px;
     .container{
         max-width: 1024px;
         
@@ -27,6 +26,7 @@ footer{
                             text-decoration: none;
                             color: #2c2c2c;
                             font-size: 1.6rem;
+                            transition: all 0.1s linear;
 
                             &:hover{
                                 color: variables.$primaryColor;
@@ -68,6 +68,7 @@ footer{
                     align-items: center;
                     background-color: #DCFFCA;
                     border-radius: 50%;
+                    transition: all 0.1s linear;
 
                     &:hover{
                         background-color: variables.$primaryColor;
