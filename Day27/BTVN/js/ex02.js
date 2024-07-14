@@ -10,7 +10,7 @@ function createCustomers(customers){
     customers.forEach(function(object){
         var firstName= (object.name).slice(0, (object.name).indexOf(" "));
         var lastName= (object.name).split(" ").slice(-1).join(" ");
-        object.shortName= `${firstName} ${lastName}`
+        object.shortName= `${firstName} ${lastName}`;
         
     })
     customers.sort(function(a, b){
@@ -18,9 +18,9 @@ function createCustomers(customers){
             return -1;
         }
     })
-    console.log(customers);
+    return customers;
 }
 
 const result = createCustomers(customers); // Tạo hàm createCustomers này. return về mảng mới.
-
+console.log(result);
   
