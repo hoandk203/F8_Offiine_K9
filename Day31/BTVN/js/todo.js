@@ -4,15 +4,18 @@ var tasksEl= document.querySelector('.tasks')
 
 btnAdd.addEventListener("click", function(e){
     e.preventDefault();
-    tasksEl.innerHTML += `<div class="task">
-                    <p>${inputAdd.value}</p>
-                    <div class="action">
-                        <i class="btn-update fa-regular fa-pen-to-square"></i>
-                        <i class="btn-delete fa-regular fa-trash"></i>
-                    </div>
-                </div>`
-    inputAdd.value= '';
-    action();
+    if(inputAdd.value !== ""){
+
+        tasksEl.innerHTML += `<div class="task">
+                        <p>${inputAdd.value}</p>
+                        <div class="action">
+                            <i class="btn-update fa-regular fa-pen-to-square"></i>
+                            <i class="btn-delete fa-regular fa-trash"></i>
+                        </div>
+                    </div>`
+        inputAdd.value= '';
+        action();
+    }
 })
 
 /////////////////////////////////////////////////////////
