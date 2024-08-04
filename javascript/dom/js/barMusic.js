@@ -23,13 +23,14 @@ progressBar.addEventListener("mousedown", function (e) {
   }
 
 });
+
 progressSpan.addEventListener("mousedown", function (e) {
   e.stopPropagation();
   if (e.which === 1) {
     drag=true
-    document.addEventListener("mousemove", handleDrag);
     clientXSpan = e.clientX;
     offsetLeft = e.target.offsetLeft;
+    document.addEventListener("mousemove", handleDrag);
   }
 });
 document.addEventListener("mouseup", function () {
@@ -46,8 +47,8 @@ var clientXSpan = 0;
 var offsetLeft = 0;
 function handleDrag(e) {
   if(drag){
-    var spaceMove = e.clientX - clientXSpan + offsetLeft;
-  rate = (spaceMove / progressBarWidth) * 100;
+    var spaceMove = e.clientX - clientXSpan;
+  rate = ((spaceMove + offsetLeft) / progressBarWidth) * 100;
   if (rate < 0) {
     rate = 0;
   }
@@ -119,9 +120,19 @@ var hoverCurrentTime= document.querySelector('.hover-current-time')
 progressBar.addEventListener("mousemove", function(e){
   hoverCurrentTime.style.display= 'inline-block'
   hoverCurrentTime.style.left= `${(e.offsetX)}px`
+
+  var rate1= (e.offsetX / progressBarWidth) * 100
+  hoverCurrentTime.innerText= getTimeFormat((audio.duration * rate1) / 100)
+
 })
+
+
 
 progressBar.addEventListener("mouseout", function(e){
   hoverCurrentTime.style.display= 'none'
 })
+
+progressSpan.addEventListener("mousemove", function (e) {
+  e.stopPropagation();
+});
 
