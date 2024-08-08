@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        table tr {
+            height: 50px;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        .cart table {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .cart table::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+        }
+
+        .container {
+            margin: 30px auto;
+            max-width: 1024px;
+        }
+
+        .product-list {
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-list">
+            <h2>Danh sach san pham</h2>
+            <table cellpadding="0" cellspacing="0" border="1" width="100%">
+                <tr>
+                    <th width="10%">STT</th>
+                    <th>Ten san pham</th>
+                    <th width="10%">Gia</th>
+                    <th width="10%">Them vao gio</th>
+                </tr>
+
+            </table>
+        </div>
+        <h2>Gio hang</h2>
+        <div class="cart">
+            <!-- <table cellpadding="0" cellspacing="0" border="1" width="100%">
+                <tr>
+                    <th>STT</th>
+                    <th>Ten san pham</th>
+                    <th>Gia</th>
+                    <th width="20%">So luong</th>
+                    <th>Thanh tien</th>
+                    <th>Xoa</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>sp1</td>
+                    <td>2000</td>
+                    <td>
+                        <input type="number" style="width: 100%; height: 50px;">
+                    </td>
+                    <td>8000</td>
+                    <td>
+                        <button class="btn-delete" style="width: 100%; height: 50px;">Xoa</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">Tong</td>
+                    <td>4</td>
+                    <td colspan="2">12000</td>
+                </tr>
+            </table>
+            <button class="btn-update">Cap nhat gio hang</button>
+            <button class="btn-delete-cart">Xoa gio hang</button> -->
+        </div>
+    </div>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
