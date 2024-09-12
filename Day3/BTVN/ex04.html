@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .contact{
+            padding: 20px;
+            background-color: lightgray;
+            max-width: 30%;
+        }
+        .contact-header{
+            margin-bottom: 16px;
+        }
+        .form-row{
+            margin-bottom: 16px;
+        }
+        .form-row1{
+            display: flex;
+        }
+        .form-row1 input, .form-row2 input{
+            width: 45%;
+            max-width: 50%;
+            margin-right: 10px;
+            padding: 2px;
+        }
+        .form-row3 textarea{
+            width: 100%;
+            max-width: 100%;
+            padding: 2px;
+        }
+        .form-row4 button{
+            max-width: 100%;
+            padding: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Đầu trang -->
+    <header>
+
+    </header>
+    <!-- Nội dung trang -->
+    <main>
+        <!-- Phần liên hệ -->
+        <section class="contact">
+            <!-- Tiêu đề phần liên hệ -->
+            <div class="contact-header">
+                <h2>Get in touch with us by filling contact form below</h2>
+            </div>
+            <!-- Form liên hệ -->
+            <div class="contact-form">
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                    <div class="form-row form-row1">
+                        <input type="text" name="fullname" placeholder="*Enter your fullname">
+                        <input type="email" name="email" placeholder="*Enter you email">
+                    </div>
+                    <div class="form-row form-row2">
+                        <input type="text" name="phone" placeholder="*Enter your phonenumber">
+                    </div>
+                    <div class="form-row form-row3">
+                        <textarea name="message" cols="30" rows="10" placeholder="*Your message here"></textarea>
+                    </div>
+                    <div class="form-row form-row4">
+                        <button type="submit">Send message</button>
+                        *Please fill all require form field, thanks!
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Chân trang -->
+    <footer>
+
+    </footer>
+</body>
+</html>

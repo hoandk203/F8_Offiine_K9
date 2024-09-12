@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    background-image: url(../img/login-bg2.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: #717171;
+}
+
+input{
+    display: block;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    min-width: 600px;
+}
+
+.form-left{
+    max-width: 40%;
+    background-color: #ff574d;
+    padding: 80px 20px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.form-left h2, .form-left p{
+    margin-bottom: 20px;
+}
+
+.read-more{
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #ff574d;
+    padding: 8px 24px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.logo{
+    display: inline-block;
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #ff574d;
+}
+
+.icon-brand i{
+    background-color: #da5c4f;
+    color: #fff;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+
+}
+
+.form-right{
+    width: 60%;
+    padding: 40px;
+    color: #717171;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.form-right-header{
+    text-align: center;
+    color: #272323;
+    margin-bottom: 24px;
+}
+
+.form-right-header span{
+    color: #ff574d;
+}
+
+.bottom-outline{
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 1px solid red;
+}
+
+.form-right input{
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-right input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.form-right input::placeholder{
+    font-size: 1rem;
+    color: #c0bfbf;
+}
+
+.col2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.check-container{
+    display: flex;
+
+}
+
+.btn-login button{
+    width: 100%;
+    border: none;
+    color: #fff;
+    background-color: #ff574d;
+    padding: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form-right-footer{
+    text-align: center;
+}
+
+.arrow-center{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.arrow-center a{
+    position: absolute;
+    left: -20px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    color: #ff574d;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 7px 0 gray;
+    text-align: center;
+}

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: #ddd;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 768px;
+    margin: 100px auto;
+}
+
+.content{
+    position: relative;
+}
+
+.tabs-list ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.tabs-list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px;
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+.tabs-list ul li label{
+    display: block;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.content-container{
+    position: absolute;
+    transform: rotateX(90deg);
+    transition: all 0.5s ease;
+    height: 300px;
+    display: flex;
+    align-items: end;
+    top: -98px;
+    opacity: 0.1;
+}
+
+.content-item{
+    height: 150px;
+    background-color: #fff;
+    padding: 12px;
+    overflow: auto;
+    line-height: 1.2;
+}
+
+.tabs-list input:checked + .content-container{
+    transform: rotateX(0deg);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+#tab-1:checked ~ li>.label-1,
+#tab-2:checked ~ li>.label-2,
+#tab-3:checked ~ li>.label-3,
+#tab-4:checked ~ li>.label-4{
+    color: #fff;
+    background-color: #4298db;
+}
+
+.tabs-list label:hover{
+    color: #fff;
+    background-color: #4298db;
+}

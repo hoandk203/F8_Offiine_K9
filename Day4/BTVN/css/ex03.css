@@ -1,0 +1,15 @@
+ul li{
+    position: relative;
+    list-style: none;
+}
+
+ul li::before{
+    position: absolute;
+    left: -20px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    background-image: url('../img/icon1.png');
+    background-size: contain;
+}

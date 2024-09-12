@@ -1,0 +1,42 @@
+/* 
+Phần tử giả
+Cú pháp: selector::tenphantu
+- before >> thêm phần tử phía trước thẻ html
+- after >> thêm phần tử phía sau thẻ html
+==> before, after phải có thuộc tính content 
+thì phần tử giả mới hiệu lực
+
+- first-letter >> chọn ký tự đầu tiên
+-first-line >> chọn dòng đầu tiên
+- selection >> chỉnh sửa phần được bôi đen
+- placeholder >> chỉnh sửa placeholder cho form
+*/
+
+.title::before{
+    content: "a";
+}
+
+.title::after{
+    content: "b";
+}
+
+.title::first-letter{
+    color: red;
+}
+
+p::first-letter{
+    color: red;
+}
+
+p::first-line{
+    color: red;
+}
+
+p::selection{
+    background-color: #000;
+    color: gold;
+}
+
+input::placeholder{
+    color: red;
+}

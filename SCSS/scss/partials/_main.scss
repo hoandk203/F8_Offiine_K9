@@ -1,0 +1,7 @@
+@use "variables";
+@forward "variables" as variables-*; //Chuyen tiep file, để file nào import file _main được bắc cầu sử dụng biến của _variables
+// Thêm tiền tố để file nào import sẽ sử dụng đúng tiền tố để không bị nhầm tên biến giống nhau
+// VD:  main.$variables-headerBackgroundColor
+.main{
+    color: variables.$primaryColor;
+}

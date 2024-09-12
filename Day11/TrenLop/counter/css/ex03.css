@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.songs{
+    width: 300px;
+    margin: 30px auto;
+    counter-reset: songs-list;
+}
+
+.songs h2{
+    display: flex;
+    margin-bottom: 20px;
+    counter-increment: songs-list;
+}
+
+.songs h2::before{
+    content: "#"counter(songs-list);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.songs .children{
+    margin-left: 25px;
+    counter-reset: songs-list-children;
+}
+
+.songs .children h2{
+    counter-increment: songs-list-children;
+}
+
+.songs .children h2::before{
+    content: counter(songs-list)"."counter(songs-list-children);
+}
+
+/* 
+Tao bo dem' CSS
+1. KHoi tao bo dem
+    counter-reset: tenbodem;
+2. Bat dau dem (ap dung cho cac selector lap di lap lai)
+    counter-increment: ten bo dem
+3. Hien thi ket qua dem
+    counter(tenbodem)
+*/

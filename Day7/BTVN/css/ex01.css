@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    font-family: "Open Sans", sans-serif;
+    color: #666;
+    background-color: #fff;
+    padding: 32px 0;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #66666649;
+}
+
+.nav-bar > ul{
+    font-size: 0;
+}
+
+.nav-bar .nav-bar-left > ul > li, .nav-bar .nav-bar-right > ul > li{
+    display: inline-block;
+    font-size: 1rem;
+    padding: 8px;
+    border-right: 1px solid #66666649;
+}
+
+.nav-bar a{
+    display: inline-block;
+    text-decoration: none;
+    color: #666;
+    padding: 12px;
+}
+
+.nav-bar-right li{
+    border-left: 1px solid #66666649;
+    border-right: none !important;
+}
+
+.nav-bar a:hover{
+    background-color: #2da5da;
+    color: #fff;
+}
+
+.news-dropdown{
+    position: relative;
+}
+
+.sub-nav{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 70px;
+    box-shadow: 0 0 12px 0 #66666681;
+}
+
+.nav-bar a:hover ~ .sub-nav, .nav-bar a:hover ~ .sub-nav-caret{
+    display: block;
+}
+
+.sub-nav li{
+    border-bottom: 1px solid #66666649;
+}
+
+.sub-nav a{
+    width: 100%;
+    padding: 16px 24px;
+}
+
+.sub-nav-caret{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 55px;
+    left: 20px;
+    border: 8px solid;
+    border-color: transparent transparent #fff transparent;
+}

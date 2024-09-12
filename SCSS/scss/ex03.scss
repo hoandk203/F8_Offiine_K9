@@ -1,0 +1,138 @@
+// responsive
+@import 'partials/-media.scss';
+
+// @include screenTablet {
+//     .header{
+//         padding: 50px 0;
+//         background-color: gray;
+//     }
+// }
+
+// @include screenMobile {
+//     .header{
+//         padding: 30px 0;
+
+//         img{
+//             display: block;
+//         }
+//     }
+// }
+
+// ---------------------------------------------------
+
+// Toan tu trong scss
+// 1. So hoc: +, -, *, /, %
+// 2. Toan tu so sanh: ==, <, >, <=, >=, !=
+// 3. Toan tu ket hop: and, or, not
+
+// Kieu du lieu
+// 1. Chuoi: Dat trong cap dau nhay'
+// 2. So
+// 3. Thuoc tinh va gia tri css
+// 4. Boolean: true va false
+// 5. Lists (Mang)
+// 6. Map (object)
+
+// $a: 'f8';
+// $b: 10;
+// $c: true;
+// $sizes: 10px, 20px, 30px;
+// $breakpoint: (sm: 576px, md: 768px, lg: 992px, xl:1200px);
+// .box{
+//     font-family: $a;
+//     font-size: $b + 10px;
+    // color: $c;
+    // width: $sizes;
+// }
+
+// -----------------------------------------------------------------
+
+// Cau lenh re nhanh if else
+// @if condition {code}
+// @if condition {code} @else (code)
+
+// $a: 11;
+// @if $a > 10 {
+//     .box{
+//         color: red;
+//     }
+// }@else{
+//     .box{
+//         color: green;
+//     }
+// }
+
+// $size: 40;
+// @if ($size < 10){
+//     .item-small{
+//         font-size: 10px;
+//     }
+// }@else if($size < 30){
+//     .item-medium{
+//         font-size: 30px;
+//     }
+// }@else if($size < 50){
+//     .item-large{
+//         font-size: 50px;
+//     }
+// }@else{
+//     .item-xlarge{
+//         font-size: 100px;
+//     }
+// }
+
+// ----------------------------------------------------------------
+
+// 1. @for
+// 2. @each
+// $number: 12;
+// @for $i from 1 through $number{
+//     .comlumn-#{$i}{
+//         $width: 30 * $i;
+//         @if ($i % 2 == 0){
+//             width: $width * 1%;
+//         }@else{
+//             width: $width + px;
+//         }
+//     }
+// }
+
+// $sizes: 20px, 40px, 60px, 80px;
+// $length: length($sizes);
+// $count: 0;
+// @each $size in $sizes{
+//     $count: $count + 1;
+//     .item-#{$size}{
+//         @if ($count == $length){
+//             width: 0px;
+//         }@else{
+//             width: $size * 2;
+//         }
+//     }
+// }
+
+// $sizes: (small, 20px, normal), (medium, 40px, 600), (large, 80px, 800);
+// @each $name, $size, $weight in $sizes {
+//     .item-#{$name}{
+//         width: $size;
+//         font-weight: $weight;
+//     }
+// }
+
+$breakpoint:(
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@each $name, $size in $breakpoint{
+
+}
+
+// Tim hieu truoc 
+// @use
+// @forward
+// Phan tich cau truc du an
+// code du an ket thuc module

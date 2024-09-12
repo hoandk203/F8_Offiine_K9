@@ -1,0 +1,33 @@
+/* 
+~
+- Chon the html ngang hang
+- Thuoc cung 1 cha
+
++
+- Con the html ngang hang lien sau
+- Thuoc cung 1 cha
+
+*/
+
+/* p ~ h2 + h2{
+    color: green;
+} */
+
+
+/* p + h2 ~h2{
+    color: green;
+} */
+
+/* .lists input:checked ~ span{
+    color: red;
+} */
+
+.box, .content{
+    background-color: lightgray;
+}
+.box{
+    color: red;
+}
+.content{
+    color: green;
+}

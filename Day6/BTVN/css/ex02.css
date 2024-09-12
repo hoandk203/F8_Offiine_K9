@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.services {
+    font-family: "Roboto", sans-serif;
+    background-color: #ebf5fe;
+    min-width: 100%;
+}
+
+.container {
+    width: 70%;
+    max-width: 1280px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 12px 0;
+}
+
+.content {
+    background-color: #fff;
+    width: 30%;
+    min-width: 230px;
+    font-size: 1.4rem;
+    padding: 2rem;
+    margin: 12px;
+    border-radius: 12px;
+}
+
+.content:hover {
+    /* border: 2px solid red; */
+    outline: green solid 3px;
+}
+
+.content-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.content-title i {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-brush {
+    background-image: linear-gradient(to right, #e45a7c, #e3765b);
+    box-shadow: 0px 0px 40px 1px #e45a7da6;
+}
+
+.fa-table-list {
+    background-image: linear-gradient(to right, #50a7a4, #7bd8a0);
+    box-shadow: 0px 0px 40px 1px #50a7a4b7;
+}
+
+.fa-bolt {
+    background-image: linear-gradient(to right, #e28832, #f4c14a);
+    box-shadow: 0px 0px 40px 1px #e28732ab;
+}
+
+.fa-rocket {
+    background-image: linear-gradient(to right, #316bce, #9fb4f9);
+    box-shadow: 0px 0px 40px 1px #316bcead;
+}
+
+.fa-layer-group {
+    background-image: linear-gradient(to right, #6f22ca, #b75ae9);
+    box-shadow: 0px 0px 40px 1px #7022cab4;
+}
+
+.fa-envelope {
+    background-image: linear-gradient(to right, #6a8a2d, #90c354);
+    box-shadow: 0px 0px 40px 1px #698a2db0;
+}
+
+.content-title h3 {
+    display: inline-block;
+    margin-left: 5.6rem;
+}
+
+.content-description {
+    color: #666666;
+    margin-bottom: 12px;
+    min-height: 70px;
+    word-wrap: break-word;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.content-learn-more a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1965e0;
+}

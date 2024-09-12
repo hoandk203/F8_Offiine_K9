@@ -1,0 +1,121 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style: none;
+}
+
+.main-content{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.profile{
+    padding-top: 50px;
+    font-family: "Asap";
+}
+
+.profile-img{
+    height: 300px;
+    min-width: 1000px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #000;
+    opacity: 0.2;
+    inset: 0;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-header{
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.profile-header-left{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+.profile-avatar{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar img{
+    width: 100%;
+}
+
+.profile-name{
+    color: #fff;
+    padding: 24px 12px;
+}
+
+.profile-name div:first-child{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.profile-name div:last-child{
+    font-size: 1.6rem;
+}
+
+.profile-name p{
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.profile-name p span{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.profile-header-nav{
+    position: relative;
+    margin-right: 5%;
+}
+
+.profile-header-nav ul li{
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 16px 0;
+    margin: 0 18px;
+    height: 52px;
+}
+
+.profile-header-nav ul li:hover a{
+    color: #df7676;
+}
+
+.profile-header-nav ul li:hover{
+    border-bottom: 2px solid #df7676;
+    
+}
+
+.profile-header-nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    
+}

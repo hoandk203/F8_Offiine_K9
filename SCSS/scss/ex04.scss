@@ -1,0 +1,9 @@
+// Sử dụng @use sẽ tự động tạo namespace là tên file
+
+@use "partials/header";
+@use "partials/footer";
+@use "components/products/header" as header-products; // Tạo namespace khác để không trùng với header
+
+.products{
+    background-color:  header.$bgColor;
+}

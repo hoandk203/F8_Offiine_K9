@@ -1,0 +1,13 @@
+// Dnh nghia cac mixin tuong ung voi cac breakpoint
+
+@mixin screenMobile{
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin screenTablet{
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}

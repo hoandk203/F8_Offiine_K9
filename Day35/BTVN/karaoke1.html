@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/karaoke1.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
+
+<body>
+    <div class="player">
+        <div class="play-action">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <div class="play-timer">
+            <span>00:00</span>
+            <div class="progress-bar">
+                <div class="progress">
+                    <span></span>
+                </div>
+                <div class="hover-current-time"></div>
+            </div>
+            <span>00:00</span>
+        </div>
+    </div>
+    <audio src="./audio/ngaymai.mp3"></audio>
+    <div><button class="btn-show-karaoke">Karaoke</button></div>
+
+    <div class="karaoke">
+        <div class="container">
+            <div class="karaoke-header">
+                <h2>KARAOKE</h2>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="karaoke-lyrics">
+            </div>
+        </div>
+    </div>
+    <script src="./js/lyric.js"></script>
+    <script src="./js/karaoke1.js"></script>
+</body>
+
+</html>

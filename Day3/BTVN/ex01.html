@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .form-signup{
+            padding: 20px;
+            background-color: lightgray;
+            width: 40%;
+        }
+        .form-header{
+            margin-bottom: 32px;
+            width: 90%;
+        }
+        .form-header h2{
+            margin-bottom: 12px;
+        }
+        .form-left-column{
+            width: 45%;
+            float: left;
+        }
+
+        .form-right-column{
+            width: 45%;
+            float: right;
+        }
+
+        .form-content input{
+            padding: 8px;
+            display: block;
+            width: 100%;
+            border: 1px solid;
+        }
+        .form-content select{
+            padding: 8px;
+            display: block;
+            width: 100%;
+            border: 1px;
+        }
+        .form-left-column div, .form-right-column div{
+            margin-bottom: 16px;
+        }
+        .form-content button{
+            display: block;
+            padding: 12px;
+            width: 100%;
+            background-color: #4cb050;
+            border: none;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Đầu trang -->
+    <header>
+
+    </header>
+    <!-- Nội dung trang -->
+    <main>
+        <!-- Phần form đăng ký nhận quà -->
+        <section class="form-signup">
+            <!-- Tiêu đề form -->
+            <div class="form-header">
+                <h2>Try a free sample</h2>
+                <p>Sign up to get a coupon you can redeem at your nearest Dancing Goat
+                    cafe for a sample of the Colombia Carlos Imbachi coffee. We'll also make
+                    sure you dont miss out on news introducing the new coffees that we add
+                    to our store regularly.</p>
+            </div>
+            <!-- Nội dung form -->
+            <div class="form-content">
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+                    <!-- Cột form bên trái -->
+                    <div class="form-left-column">
+                        <div>
+                            <label><b>First name</b></label>
+                            <input type="text" name="firstname">
+                        </div>
+                        <div>
+                            <label><b>Email address</b></label>
+                            <input type="email" name="email">
+                        </div>
+                        <div>
+                            <label><b>City</b></label>
+                            <input type="text" name="city">
+                        </div>
+                        <div>
+                            <label><b>ZIP code</b></label>
+                            <input type="text" name="zipcode">
+                        </div>
+                    </div>
+                    <!-- Cột form bên phải -->
+                    <div class="form-right-column">
+                        <div>
+                            <label><b>Last name</b></label>
+                            <input type="text" name="lastname">
+                        </div>
+                        
+                        <div>
+                            <label><b>Address</b></label>
+                            <input type="text" name="address">
+                        </div>
+                        <div>
+                            <label><b>State</b> (optional)</label>
+                            <input type="text" name="state">
+                        </div>
+                        <div>
+                        <label><b>Country</b></label>
+                        <select name="country">
+                            <option value="cn">China</option>
+                            <option value="us">United State</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <button type="submit">SEND ME FREE COFFEE</button>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Chân trang -->
+    <footer>
+
+    </footer>
+</body>
+</html>

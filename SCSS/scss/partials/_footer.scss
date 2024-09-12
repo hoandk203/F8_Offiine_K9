@@ -1,0 +1,8 @@
+$bgColor: red;
+$-fontSize: 16px; //Thêm - thì file khác import rồi cũng không dùng được (private member)
+
+.footer{
+    padding: 30px 0;
+    background-color: $bgColor;
+    font-size: $-fontSize;
+}

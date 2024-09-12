@@ -1,0 +1,35 @@
+// Cú pháp nested selector: lồng
+
+// Biến trong scss
+@import "./partials/variables";
+
+.header{
+    padding: 30px 0;
+    background-color: $primaryColor;
+    color: $headerBackgroundColor;
+    .logo{
+        float: left;
+        $opacityImg: 0.5;
+        img{
+            max-width: 100%;
+            height: auto;
+            opacity: $opacityImg;
+        }
+    }
+}
+
+// $size: 20;
+// .box{
+//     font-size: $size + 0%; //$size * 1%;
+// }
+
+// $property: background-color;
+// .box{
+//     #{$property}: red;
+// }
+
+$selector: '.column-medium';
+$number: 5;
+#{$selector + "-" + $number}{
+    color: red;
+}

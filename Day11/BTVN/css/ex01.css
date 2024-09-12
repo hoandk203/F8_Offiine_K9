@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: #12a1e5;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+.page-title{
+    color: #fff;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    right: 10%;
+    text-align: right;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.page-title h1{
+    font-size: 4.4rem;
+    font-weight: bold;
+}
+
+.page-title span{
+    font-size: 2.8rem;
+    
+}
+
+.menu-button, .menu-button2{
+    position: absolute;
+    color: #12a1e5;
+    z-index: 1;
+    font-size: 36px;
+    left: 20px;
+    top: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-button{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.menu-button2{
+    visibility: hidden;
+    transition-property: transform, visibility;
+    transition: 0.2s ease;
+}
+
+#check1:checked ~ label>.menu-button{
+    opacity: 0;
+}
+
+#check1:checked ~ label>.menu-button2{
+    visibility: visible;
+    transform: rotate(180deg);
+}
+
+
+#check1:checked ~ .overlay{
+    scale: 30 30;
+}
+
+#check1:checked ~ .menu-nav{
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay{
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: scale 1s ease;
+}
+
+.menu-nav{
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.menu-nav ul li{
+    list-style: none;
+    padding: 8px 8px 8px 0;
+
+}
+
+.menu-nav ul li label{
+    display: inline-block;
+    color: #12a1e5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 8px 8px 8px 20%;
+    cursor: pointer;
+    width: 100%;
+}
+
+#check-a1:checked + label, #check-a2:checked + label, #check-a3:checked + label, #check-a4:checked + label{
+    
+    background-color: #ddd;
+}
+
+#check-a1:checked + label, #check-a2:checked + label, #check-a3:checked + label, #check-a4:checked + label{
+    color: #000;
+}
+
+@media screen and (max-width: 400px) {
+    .page-title{
+        color: #fff;
+        line-height: 1.5;
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        right: 10%;
+        text-align: right;
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+    
+    .page-title h1{
+        font-size: 2.8rem;
+        font-weight: bold;
+    }
+    
+    .page-title span{
+        font-size: 2rem;
+        
+    }
+}

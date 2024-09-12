@@ -1,0 +1,40 @@
+/* 
+margin tạo khoảng cách bên ngoài border
+Khi dùng đơn vị % cho margin thì margin theo width của thẻ cha
+margin không hoạt động với inline
+hỗ trợ giá trị âm và auto
+
+TH1: 2 thành phần đứng cạnh nhau
+- nếu 2 margin cùng dấu >> lấy trị tuyệt đối lớn hơn
+- nếu 2 margin trái dấu >> lấy tổng hai giá trị
+*/
+
+.box{
+    border: 1px solid red;
+    width: 300px;
+    /* margin: 0 auto; */
+    /* margin-inline:auto; */
+    margin-bottom: -50px;
+}
+
+.box2{
+    border: 1px solid red;
+    margin-top: 30px;
+}
+
+.content{
+    background-color: green;
+    color: #fff;
+    padding: 30px 0;
+
+    /* khắc phục khi margin xong bị thu hẹp thẻ cha ( margin thẻ h2 thì .content bị thu hẹp lại) */
+    /* border: 1px solid transparent; */
+    /* display: flex; */
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* float: left; */
+}
+
+.content h2{
+    /* margin: 30px 0; */
+}

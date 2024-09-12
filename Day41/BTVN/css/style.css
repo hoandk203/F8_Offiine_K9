@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    line-height: 1.5;
+    background-color: #272727;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    color: #6eeb83;
+    font-size: 2rem;
+}
+
+.sign-in {
+    border: none;
+    background-color: #6eeb83;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sign-in:hover {
+    background-color: #15dba0;
+}
+
+.posts {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.post .time {
+    position: relative;
+    padding-right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 10%;
+
+    font-size: 1.4rem;
+}
+
+.post .time .time-passed span {
+    border-top: 1px solid #6eeb83;
+    border-bottom: 1px solid #6eeb83;
+    padding: 2px 0;
+}
+
+.post .time .username {
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+}
+
+.post .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.post .content::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.post .content .title {
+    font-size: 2rem;
+    color: #6eeb83;
+}
+
+.post .content .description {
+    font-size: 1.6rem;
+    word-break: break-all;
+}
+
+.post .content .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post .content .view-more a,
+.post .content .link a {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #6eeb83;
+    border: 1px solid #6eeb83;
+    border-radius: 99px;
+    padding: 4px 12px;
+    text-decoration: underline #fff;
+}
+
+.post .content .view-more a:hover,
+.post .content .link a:hover {
+    text-decoration: underline #6eeb83;
+}
+
+.post .content .read-time {
+    font-size: 1.6rem;
+    color: #6eeb83;
+}
+
+.post .content .read-time span {
+    float: right;
+}
+
+.post .content .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.post .content .user-profile .user-profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6eeb83;
+}
+
+.post .content .user-profile .user-profile-image p {
+    font-size: 2rem;
+    color: #000;
+}
+
+.post .content .user-profile .user-profile-name {
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+.post .content .user-profile .user-profile-name a {
+    color: #fff;
+}

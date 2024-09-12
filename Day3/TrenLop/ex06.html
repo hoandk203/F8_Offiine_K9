@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+            <input type="text" name="fullname" placeholder="Ho va ten..." />
+            <button>Gui</button>
+            <input type="email" name="email" placeholder="email" />
+        </form>
+
+        <form action="">
+            <div>
+                <label for="lbl-name">Ho va ten:</label>
+                <input type="text" id="lbl_name" name="name" placeholder="Ho va ten..." />
+                <!--còn thuộc tính disabled, maxlength-->
+            </div>
+            <div>
+                <label for="lbl-email">Email:</label>
+                <input type="email" id="lbl-email" name="email" placeholder="Email......" />
+            </div>
+            <div>
+                <label for="lbl-pass">Password:</label>
+                <input type="password" id="lbl-pass" name="password" placeholder="Password......" />
+            </div>
+            <div>
+                <label for="lbl-age">Age:</label>
+                <input type="number" id="lbl-age" name="age" placeholder="Age......" />
+            </div>
+            <div>
+                <label for="lbl-avatar">Avatar:</label>
+                    <option value="0">Chon tinh, thanh pho</option>
+                    <input type="file" id="lbl-avatar" name="avatar" placeholder="Avatar......" multiple/>
+            </div>
+            <div>
+                <label>Gioi tinh:</label>
+                <label> <input type="radio" name="gender" value="0" checked />Nam </label>
+                <label> <input type="radio" name="gender" value="1" checked />Nu </label>
+                <label> <input type="radio" name="gender" value="2" />Khong xac dinh </label>
+            </div>
+            <div>
+                <label>Nguon:</label>
+                <label> <input type="checkbox" name="source" value="facebook" checked />Facebook </label>
+                <label> <input type="checkbox" name="source" value="zalo" checked />Zalo</label>
+                <label> <input type="checkbox" name="source" value="tiktok" />Tiktok</label>
+            </div>
+            <div>
+                <label for="lbl-date">Date:</label>
+                <input type="date" id="lbl-date" name="date" placeholder="Date......" />
+            </div>
+            <div>
+                <label for="lbl-price">Gia:</label>
+                <input type="range" id="lbl-price" name="price" placeholder="Price......" />
+            </div>
+            <div>
+                <label for="lbl-message">Tin nhan:</label>
+                <textarea name="message" id="lbl-message" cols="50" rows="5" placeholder="Noi dung...">hello
+world
+                </textarea>
+            </div>
+            <div>
+                <label for="provinces">Tinh thanh:</label>
+                <select name="provinces" id="provinces"x>
+                    <option value="0" hidden>Chon tinh, thanh pho</option>
+                    <option value="1">Ha Noi</option>
+                    <option value="2">TPHCM</option>
+                    <option value="3">Da Nang</option>
+                    <option value="4">Thai Nguyen</option>
+                </select>
+            </div>
+            <button>Gui</button>
+        </form>
+    </body>
+</html>

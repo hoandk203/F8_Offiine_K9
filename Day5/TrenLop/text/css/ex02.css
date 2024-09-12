@@ -1,0 +1,55 @@
+/* 
+thuoc tinh color: thay doi mau chu
+Opacity: do trong suot cua mau
+
+luu y: trong cac thuoc tinh css luon co cac gia tri ke thua
+- initial: gia tri ban dau cua trinh duyet
+- inherit: ke thua gia tri cua phan tu cha
+
+font-size: thay doi co~ chu~
+- font-size: value+unit
++unit:  px -> don vi tuyet doi
+        pt -> don vi tuyet doi
+        em -> don vi tuong doi (ti le voi thanh phan cha)
+        rem -> don vi tuong doi (ti le voi gia tri mac dinh cua trinh duyet)
+        % -> don vi tuong doi (ti le voi thanh phan cha)
+
+line-height: thay doi khoang cach cua dong`
+line-height: value;
+
+
+*/
+
+/* .content{
+    color: rgb(34, 165, 197);
+    
+}
+
+.content:hover{
+    color: initial;
+}
+
+.content{
+    font-size: 2em;
+} */
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+/* .box{
+    font-size: 1.2em;
+}
+
+.content{
+    font-size: 1.2em;
+}
+
+p{
+    font-size: 1.2em;
+} */

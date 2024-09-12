@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conclusion{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b5f7a;
+    line-height: 24px;
+    padding: 20px;
+    width: 50%;
+}
+
+.conclusion-header{
+    margin-bottom: 20px;
+}
+
+.conclusion-body{
+    margin-bottom: 20px;
+}
+
+.conclusion-body span{
+    background-color: #4b5f7a2d;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.conclusion-footer{
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.conclusion-footer p:nth-child(1){
+    margin-bottom: 16px;
+}

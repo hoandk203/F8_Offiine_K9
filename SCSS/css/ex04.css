@@ -1,0 +1,20 @@
+.header {
+  padding: 30px 0;
+  background-color: blue;
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: red;
+  font-size: 16px;
+}
+
+.header-products {
+  border: 1px solid red;
+}
+
+.products {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=ex04.css.map */

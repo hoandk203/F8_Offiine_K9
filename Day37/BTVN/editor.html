@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Editor</title>
+    <link rel="stylesheet" href="./css/editor.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="editor-container">
+        <h1 class="header">Doc Editor</h1>
+        <div class="toolbar">
+            <div class="file-actions">
+                <div class="dropdown">
+                    <button class="fileBtn">File<i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" class="newFile">New</a>
+                        <a href="#" class="customUploadBtn">Upload Images</a>
+                        <a href="#" class="saveImg">Image to PDF</a>
+                        <a href="#" class="saveTxt">Save as TXT</a>
+                        <a href="#" class="savePdf">Save as PDF</a>
+                    </div>
+                </div>
+                <input type="text" class="fileName" value="File Name">
+                <input type="file" class="uploadFile" multiple accept="image/*" hidden>
+            </div>
+            <div class="text-actions">
+                <button class="boldBtn"><b>b</b></button>
+                <button class="italicBtn"><i>i</i></button>
+                <button class="underlineBtn"><u>u</u></button>
+                <input type="color" class="colorPicker">
+            </div>
+        </div>
+        <div class="editor" contenteditable="true"></div>
+        <div class="status-bar">
+            <span class="charCount">Số ký tự: 0</span>
+            <span class="wordCount">Số từ: 0</span>
+        </div>
+    </div>
+    <script src="./js/editor.js"></script>
+</body>
+
+</html>

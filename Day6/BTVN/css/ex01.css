@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+select{
+    -webkit-appearance: none;
+}
+
+textarea{
+    resize: none;
+}
+
+.container{
+    font-family: "Lato", sans-serif;
+    width: 50%;
+    max-width: 720px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-header{
+    margin-bottom: 3rem;
+
+}
+
+.form-header h2{
+    font-family: "Lobster", sans-serif;
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 1.6rem;
+}
+
+.form-header p{
+    font-size: 1.6rem;
+}
+
+.form-header p span{
+    color: #e93f32;
+}
+
+.form-content{
+    font-size: 1.6rem;
+}
+
+.form-content .form-row{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2.4rem;
+}
+
+.form-content .form-row .fa-xmark{
+    display: none;
+}
+
+.form-content input:focus ~ .input-icon-left,.form-content select:focus ~ .input-icon-left,.form-content textarea:focus ~ .input-icon-left{
+    background-color: #000;
+}
+
+.form-content input:focus ~ .fa-xmark, .form-content select:focus ~ .icon-tabler-caret-up-down, .form-content textarea:focus ~ .fa-xmark{
+    display: inline-block;
+    color: #000;
+}
+
+.form-content input:focus ~ .fa-star, .form-content textarea:focus ~ .fa-star{
+    display: none;
+}
+
+.form-content input:hover ~ .input-icon-left,.form-content select:hover ~ .input-icon-left,.form-content textarea:hover ~ .input-icon-left{
+    background-color: #000;
+}
+
+.form-content input:hover,.form-content select:hover,.form-content textarea:hover{
+    border-color: #000;
+}
+
+.form-content input:focus ~ .message-on-input,.form-content textarea:focus ~ .message-on-input{
+    display: flex;
+}
+
+.input-icon-left{
+    position: absolute;
+    padding: 1.2rem 1.2rem 1.2rem 1.6rem;
+    min-width: 4.6rem;
+    background-color: #ddd;
+    color: #fff;
+    height: 98%;
+    left: 0;
+}
+
+.input-icon-right{
+    position: absolute;
+    right: 0;
+    padding: 1.2rem 1.2rem 1.2rem 1.6rem;
+    min-width: 4.6rem;
+    background-color: transparent;
+    color: #ddd;
+    height: 98%;
+}
+
+.form-content input, .form-content select, .form-content textarea{
+    
+    width: 100%;
+    padding: 1.2rem 1.2rem 1.2rem 6rem;
+    border: 1px solid #ddd;
+}
+
+.form-content select,textarea::placeholder, .form-content input::placeholder{
+    color: #a9a9a9;
+}
+
+.form-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.form-footer button{
+    background-color: #e93f32;
+    border: none;
+    color: #fff;
+    padding: 8px 28px;
+    cursor: pointer;
+}
+
+.form-check label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-check p{
+    color: #a9a9a9;
+    
+}
+
+.checkmark {
+    display: none;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 7px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+
+}
+
+.checkmark-container{
+    display: flex;
+    border: 3px solid #ddd;
+    justify-content: space-around;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.form-check input:checked ~ label>.checkmark-container>.checkmark{
+    display: block;
+}
+
+.message-on-input{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: -52px;
+    left: 40px;
+}
+
+.message-on-input div:first-child{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 12px;
+}
+
+.message-on-input div:last-child{
+    width: 0;
+    border: 10px solid #000;
+    border-color: #000 transparent transparent transparent;
+    height: 0;
+    margin-left: 20px;
+}

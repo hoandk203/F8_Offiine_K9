@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stravel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+    <header>
+        <div class="header-row row">
+            
+            <input type="checkbox" hidden name="" id="toggle-menu">
+            <label for="toggle-menu" class="toggle-menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="logo">
+                <a href="#"><span>S</span>travel</a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#location">Điểm Đến</a></li>
+                    <li><a href="#service">Dịch Vụ</a></li>
+                    <li><a href="#gallery">Ảnh</a></li>
+                    <li><a href="#blog">Blogs</a></li>
+                </ul>
+            </nav>
+            <div class="header-order">
+                <input type="checkbox" hidden id="toggle-light">
+                <label for="toggle-light" class="toggle-light">
+                    <i class="fa-regular fa-sun"></i>
+                    <i class="fa-regular fa-moon"></i>
+                </label>
+                <a href="#">Đặt ngay</a>
+            </div>
+        </div>
+    </header>
+    <!-- SLIDER -->
+    <section id="slider">
+        <div class="slider-container">
+            <div class="slider-text">
+                <h3>Mumbai</h3>
+                <h2>Thành Phố Có Tất Cả</h2>
+                <p>Mumbai Không Chỉ Là Trung Tâm Tài Chính – Kinh Tế, Kinh Đô Điện Ảnh – Thời Trang Của Ấn Độ, Mà Đây Còn Là Thành Phố Cảng Vừa Hiện Đại Nhưng Vẫn Mang Nhiều Nét Cổ Kính Với Những Công Trình Kiến Trúc, Quán Bar, Nhà Hàng, Viện Bảo Tàng Và Các Cửa Hàng Thời Trang Hấp Dẫn…</p>
+                <a href="#">Tìm hiểu thêm</a>
+            </div>
+        </div>
+        <div class="discount row">
+            <div class="discount-text">
+                <p>Ưu đãi 30.000.000<br>cho 5người/3ngày</p>
+            </div>
+            <div class="discount-order">
+                <a href="#">Đặt ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <input type="radio" name="toggle-video" id="check-video-1" checked hidden>
+        <input type="radio" name="toggle-video" id="check-video-2" hidden>
+        <input type="radio" name="toggle-video" id="check-video-3" hidden>
+        <div class="about-container">
+            <div class="about-row">
+                <div class="about-video">
+                    <div class="video-frame">
+                        <video class="video-1" src="./video/vid-1.mp4" autoplay loop muted></video>
+                        <video class="video-2" src="./video/vid-2.mp4" autoplay loop muted></video>
+                        <video class="video-3" src="./video/vid-3.mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="toggle-video">
+                        <label class="btn-toggle-video" for="check-video-1"></label>
+                        <label class="btn-toggle-video" for="check-video-2"></label>
+                        <label class="btn-toggle-video" for="check-video-3"></label>
+                    </div>
+                </div>
+                <div class="about-video-text">
+                    <div class="section-title-1"><p>Tại Sao Nên Chọn Stravel</p></div>
+                    <div class="section-title-2"><h3>Trải Nghiệm Bậc Nhất</h3></div>
+                    <p>Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc Nhất Để Đem Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn Cùng Người Thân</p>
+                    <a href="#">Tìm Hiểu Thêm Về Stravel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+        <div class="location-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="section-title">
+                <div class="section-title-1">
+                    <p>Những điểm đến ở Mumbai</p>
+                </div>
+                <div class="section-title-2">
+                    <h3>Những điểm du lịch bậc nhất</h3>
+                </div>
+            </div>
+            <div class="location-row row">
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-1.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Ấn Độ Môn</h4>
+                            <p>Được Xây Dựng Vào Năm 1931, Còn Có Tên Gọi Khác Là “Bia Kỷ Niệm Chiến Sĩ Ấn Độ”</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-2.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Tòa Nhà Hình Trứng</h4>
+                            <p>Nghệ Thuật Kiến Trúc Thị Giác Kết Hợp Với Cách Sản Xuất, Sử Dụng Và Tái Tạo Năng Lượng Thông Minh</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-3.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Vườn Quốc Gia Sanjay Gandhi</h4>
+                            <p>
+                                bao gồm loài bướm đêm Atlas – bướm đêm lớn nhất thế giới, cây
+                                hoa Karvi 7 năm nở hoa một lần…
+                            </p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-4.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Trung Tâm Triễn Lãm Jehanggir</h4>
+                            <p>Khu Vực Triển Lãm Hàng Đầu Ở Mumbai Dành Cho Nền Mỹ Thuật Ấn Độ Đương Đại</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-5.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Hang Động Elephanta</h4>
+                            <p>Lưu Giữ Nhiều Kiến Trúc Chạm Khắc Tinh Xảo Và Chúng Đã Xuất Hiện Ở Đây Từ Thế Kỷ Thứ 5 Đến Thứ 8</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-6.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Lonavala Và Khandala</h4>
+                            <p>Khu Nghỉ Dưỡng Rất Nổi Tiếng, Nằm Giữa Đường Cao Tốc Mumbai – Pune.</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-7.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Thành Phố Pune</h4>
+                            <p>Giáo Dục, Nghệ Thuật Và Âm Nhạc Là Trọng Tâm Tại Thành Phố Có Nền Văn Hóa Phong Phú Lâu Đời Này</p>
+                            <a href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/des-8.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Thành Phố Nashik</h4>
+                            <p>Là Trung Tâm Hành Hương Lớn Của Người Hindu. Nashik Có Sự Pha Trộn Của Nét Cổ Xưa Và Hiện Đại</p>
+                            <a class="read-more" href="#"><div>Đọc Thêm</div> <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE  -->
+    <section id="service">
+        <div class="service-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="section-title">
+                <div class="section-title-1">
+                    <p>Dịch Vụ</p>
+                </div>
+                <div class="section-title-2">
+                    <h3>Nâng Cao Trải Nghiệm</h3>
+                </div>
+            </div>
+            <div class="service-row row">
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="service-name">
+                            Rộng khắp thế giới
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-person-hiking"></i>
+                        </div>
+                        <div class="service-name">
+                            Những cuộc phiêu lưu
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <div class="service-name">
+                            Dịch vụ ăn uống
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <div class="service-name">
+                            Nghỉ dưỡng cao cấp
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <div class="service-name">
+                            Giá tốt nhất
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div class="service-name">
+                            Hỗ trợ 24/7
+                        </div>
+                        <div class="service-text">
+                            Some Text...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="gallery-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="gallery-title">
+                <h3>Những Bức Ảnh Về Mumbai</h3>
+            </div>
+            <div class="gallery-row row">
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-1.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Thành phố Mumbai</p>
+                            <h4>Vườn quốc gia Sanjay Gandhi</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-2.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Nhà thờ chính của giáo xứ Phố cổ ở Toruń</p>
+                            <h4>Nhà Thờ St John The Evangelist</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-3.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Nằm Trên Đỉnh Ngọn Đồi Malabar Ở Mumbai</p>
+                            <h4>Vườn Treo Mumbai</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-4.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Bảo Tàng Viện Của Thành Phố Mumbai</p>
+                            <h4>Dr. Bhau Daji Lad</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-5.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Di Sản Thế Giới Được UNESCO Nhìn Nhận</p>
+                            <h4>Tòa Đô Chánh Mumbai</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-6.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Mumbai</p>
+                            <h4>Kiến Trúc Thời Victoria</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-7.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Khách Sạn 5 Sao Ở Mumbai</p>
+                            <h4>Khách Sạn Taj Mahal</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-8.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Phía Đông Thành Phố Mumbai</p>
+                            <h4>Hang Động Elephanta</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-xl-4 col-md-6 col-sm-12">
+                    <div class="gallery-item">
+                        <div class="gallery-img">
+                            <img src="./img/gallery-img-9.jpg" alt="">
+                        </div>
+                        <div class="gallery-text">
+                            <p>Mumbai</p>
+                            <h4>Phiên Chợ Địa Phương</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEW -->
+    <section class="review">
+        <div class="review-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="review-row row">
+                <div class="col-6 col-md-12 review-title">
+                    <h3>Những Lời Đánh Giá Tốt Nhất</h3>
+                    <p>Tất Cả Những Lời Đánh Giá Chúng Tôi Đều Ghi Nhận Và Tiếp Thu Để Phát Triển. Đây Là Những Đánh Giá Tốt Nhất Về Chuyến Đi Mumbai Này.</p>
+                </div>
+                <div class="col-6 col-md-12 review-content">
+                    <div class="row">
+                        <div class="col-4 col-xl-6 col-sm-12">
+                            <div class="review-content-item">
+                                
+                                <div class="profile">
+                                    <div class="avatar">
+                                        <img src="./img/pic-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="name">Duong Nguyen</div>
+                                        <div class="job">Nội Trợ</div>
+                                    </div>
+                                </div>
+                                <div class="review-comment">
+                                    <p>Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi Sẽ Quay Lại Đay Môt Lần Nữa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6 col-sm-12">
+                            <div class="review-content-item">
+                                
+                                <div class="profile">
+                                    <div class="avatar">
+                                        <img src="./img/pic-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="name">Some People</div>
+                                        <div class="job"></div>
+                                    </div>
+                                </div>
+                                <div class="review-comment">
+                                    Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon. Chắc Chắn Sẽ Quay Lại Vì Đồ Ăn Hihi
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-6 col-sm-12">
+                            <div class="review-content-item">
+                                
+                                <div class="profile">
+                                    <div class="avatar">
+                                        <img src="./img/pic-3.png" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="name">Some People</div>
+                                        <div class="job">Nằm Nhà</div>
+                                    </div>
+                                </div>
+                                <div class="review-comment">
+                                    <p>Khách Sạn Ở Rất Tuyệt. Thích Hợp Với 1 Chỗ Nghỉ Dưỡng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6 col-sm-12">
+                            <div class="review-content-item">
+                                
+                                <div class="profile">
+                                    <div class="avatar">
+                                        <img src="./img/pic-4.png" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="name">Some People</div>
+                                        <div class="job">abc...</div>
+                                    </div>
+                                </div>
+                                <div class="review-comment">
+                                    <p>Hướng Dẫn Viên Rất Chu Đáo. Mọi Dịch Vụ Đều Có Và Rất Thoải Mái</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="contact-title">
+                <h3>Đánh Giá</h3>
+            </div>
+            <div class="contact-row row">
+                <div class="col-6 col-md-12">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.485589452924!2d105.79676221150856!3d21.01324778822916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab58b4308297%3A0x29722e519255d053!2zQ2jhu6MgVHJ1bmcgS8Otbmg!5e0!3m2!1svi!2s!4v1717650793523!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-6 col-md-12">
+                    <form action="">
+                        <div class="form-contact">
+                            <div class="form-input row">
+                                <div class="col-6 col-sm-12"><input type="text" name="fullname-contact" placeholder="Tên của bạn" required></div>
+                                <div class="col-6 col-sm-12"><input type="email" name="email-contact" placeholder="Email liên hệ" required></div>
+                                <div class="col-6 col-sm-12"><input type="number" name="phonenumber-contact" placeholder="Số điện thoại" required></div>
+                                <div class="col-6 col-sm-12"><input type="text" name="topic-contact" placeholder="Chủ đề" required></div>
+                                <div class="col-12"><textarea name="message-contact" placeholder="Viết đánh giá của bạn về chuyến đi" rows="7"></textarea></div>
+                            </div>
+                            <div class="form-btn">
+                                <button type="submit">Gửi Tới Stravel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+        <div class="blog-container container container-xxl container-xl container-lg container-md container-sm">
+            <div class="section-title">
+                <div class="section-title-1"><p>blogs & posts</p></div>
+                <div class="section-title-2"><h3>Tìm hiểu thêm về Mumbai</h3></div>
+
+            </div>
+            <div class="blog-row row">
+                <div class="col-4 col-xl-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/blog-1.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Mang Những Gì Khi Đi Mumbai</h4>
+                            <p>Giấy Tờ Tuỳ Thân, Giấy Xác Minh Tài Chính, Visa, Vé Máy Bay, Trang Phục, Đồ Dùng Cá Nhân, Balo, Túi Đựng Đồ...</p>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>21st May, 2021</span></a>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>By Admin</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xl-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/blog-2.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Xin Visa Đi Mumbai</h4>
+                            <p>Visa Ai Cập Không Khó Xin, Thủ Tục Đơn Giản Gồm Đơn Tải Từ Trang Web Chính Thức Của Đại Sứ Quán</p>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>21st May, 2021</span></a>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>By Admin</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xl-6 col-sm-12">
+                    <div class="item">
+                        <div class="item-img"><img src="./img/blog-3.jpg" alt=""></div>
+                        <div class="item-text">
+                            <h4>Phương Tiện Di Chuyển</h4>
+                            <p>Bạn Có Thể Đi Xe Bus, Tàu Lửa, Tàu Thủy Hoặc Bất Cứ Phương Tiện Nào Có Thể Di Chuyển Đều Được.</p>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>21st May, 2021</span></a>
+                            <a href="#"><i class="fa-solid fa-clock"></i> <span>By Admin</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section id="banner">
+        <div class="banner-content">
+            <p>Cùng Stravel</p>
+            <h3>Bắt Đầu Chuyến Đi Của Bạn</h3>
+            <p>Mỗi Chuyến Đi Đều Là Một Kỷ Niệm Đẹp. Hãy Cùng STravel Ghi Lại Kỷ Niệm Này !</p>
+            <a href="#">Đặt Ngay</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container container-xxl container-xl container-lg container-md container-sm">
+            <div class="footer-row row">
+                <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="logo"><a href="#"><span>S</span>travel</a></div>
+                    <p>Trải Qua 17 Năm Phát Triển Bền Vững, STravel Đã Ghi Dấu Ấn Của Mình Với Thông Điệp
+                        “Nâng Tầm Trải Nghiệm Từng Chuyến Đi”</p>
+                    <div class="contact-icon">
+                        <div class="facebook-contact"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="twitter-contact"><i class="fa-brands fa-twitter"></i></div>
+                        <div class="instargram-contact"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="linkedin-contact"><i class="fa-brands fa-linkedin-in"></i></div>
+
+                    </div>
+                </div>
+                <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-nav">
+                        <h4>Chuyển Hướng Nhanh</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-arrow-right"></i> Trang Chủ</a></li>
+                            <li><a href="#about"><i class="fa-solid fa-arrow-right"></i> About</a></li>
+                            <li><a href="#location"><i class="fa-solid fa-arrow-right"></i> Điểm Đến</a></li>
+                            <li><a href="#service"><i class="fa-solid fa-arrow-right"></i> Dịch Vụ</a></li>
+                            <li><a href="#gallery"><i class="fa-solid fa-arrow-right"></i> Ảnh</a></li>
+                            <li><a href="#blog"><i class="fa-solid fa-arrow-right"></i> Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h4>Liên Hệ</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-map"></i> Hà Nội, Việt Nam</li>
+                            <li><i class="fa-solid fa-phone"></i> +84-986-921-104</li>
+                            <li><i class="fa-solid fa-envelope"></i> hoanyttv@gmail.com</li>
+                            <li><i class="fa-solid fa-clock"></i> 7:00am - 10:00pm</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 col-lg-4 col-md-6 col-sm-12 footer-form">
+                    <h4>Tin Tức Mới</h4>
+                    <p>Đăng Ký Để Nhận Tin Tức Về Ưu Đãi Sớm Nhất!</p>
+                    <form action="">
+                        <div class="form">
+                            <input type="email" name="email-footer" placeholder="Email của bạn..." required>
+                            <button type="submit">Đăng Ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="credit">
+        <p>Created By <span>STravel</span> | All Rights Reserved!</p>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="https://kit.fontawesome.com/cd5ccb40a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

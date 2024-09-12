@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-row">
+            <label class="toggle-sidebar" for="toggle-sidebar">
+                <i class="fa-solid fa-chevron-right"></i>
+            </label>
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt="logo"></a>
+            </div>
+            <label for="toggle-menu" class="toggle-menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <input type="checkbox" id="toggle-menu" hidden>
+            <div class="header-responsive">
+                <div class="header-search">
+                    <span>
+                        <div>
+                            <form action="">
+                                <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+                                <input type="text" placeholder="Search store" required>
+                            </form>
+                        </div>
+                    </span>
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">story</a></li>
+                        <li><a href="#">manufacturing</a></li>
+                        <li><a href="#">packaging</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cart-and-user">
+                    <div class="header-cart">
+                        <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                    </div>
+                    <div class="header-user">
+                        <a href="#"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <input type="checkbox" id="toggle-sidebar" hidden>
+        <label for="toggle-sidebar" class="overlay"></label>
+        <aside class="sidebar-container">
+            <div class="sidebar">
+                <div class="logo">
+                    <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                </div>
+                <h2>Explore</h2>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="#"><div><img src="./img/sidebar-img-1.png" alt="sidebar-img"></div>New In</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-2.png" alt="sidebar-img"></div>Clothing</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-3.png" alt="sidebar-img"></div>Shoes</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-4.png" alt="sidebar-img"></div>Accessories</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-5.png" alt="sidebar-img"></div>Activewear</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-6.png" alt="sidebar-img"></div>Gifts & Living</a></li>
+                        <li><a href="#"><div><img src="./img/sidebar-img-7.png" alt="sidebar-img"></div>Inspiration</a></li>
+                    </ul>
+                </nav>
+                <div class="sidebar-support">
+                    <a href="#">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>Help center</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="content-row row">
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-12 img-horizontal">
+                        <img src="./img/img-1.jpg" alt="">
+                        <div class="img-text-1">
+                            <h3>GET UP TO 50% OFF</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 img-horizontal">
+                        <img src="./img/img-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-6 img-vertical">
+                        <img src="./img/img-3.png" alt="">
+                    </div>
+                    <div class="col-6 img-vertical">
+                            <img src="./img/img-4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-12 img-horizontal">
+                        <img src="./img/img-7.jpg" alt="">
+                        <div class="img-text-2">
+                            <h4 class="blue">Trending & Hot</h4>
+                            <p>A collection of most trending items.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 img-horizontal">
+                        <img src="./img/img-8.jpg" alt="">
+                        <div class="img-text-2">
+                            <h4 class="red">Buy it for the first time</h4>
+                            <p>New in store. Try it before anyone else.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-6 img-vertical">
+                        <img src="./img/img-5.png" alt="">
+                    </div>
+                    <div class="col-6 img-vertical">
+                        <img src="./img/img-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

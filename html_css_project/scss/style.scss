@@ -1,0 +1,11 @@
+@use "partials/reset";
+@use "partials/base";
+@use "partials/fonts";
+
+@use "layouts/header";
+@use "layouts/footer";
+
+@use "pages/home";
+@use "pages/about";
+@use "pages/products";
+@use "pages/news";

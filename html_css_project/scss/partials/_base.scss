@@ -1,0 +1,62 @@
+// Định nghĩa các class hay dùng trong dư án
+// VD: .btn, .btn-sm..., .d-lex, .justify-content-start...
+@use "variables";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body{
+    color: variables.$primaryTextColor;
+    font-weight: 500;
+	line-height: 1.5;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+}
+
+input, textarea{
+    font-family: "Inter", sans-serif;
+}
+
+.pt-100{
+    padding-top: 100px;
+}
+
+.pb-200{
+    padding-bottom: 200px;
+}
+
+.pt-60{
+    padding-top: 60px;
+}
+
+.pb-60{
+    padding-bottom: 60px;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.bg-green{
+    background-color: variables.$bgGreen;;
+}
+
+.bg-pink{
+    background-color: #FFF0E7;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+    .px-xl-70{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}

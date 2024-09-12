@@ -1,0 +1,76 @@
+/* 
+font-family: thay doi font chu~ cho van ban
+font-family: tenfont1, tenfont2,...
+
+Luu y:
+- Neu ten font co khoang trang' -> phai them vao "" "tenfont"
+
+Trong thuoc tinh font-family co cac gia tri dai dien cho ho. font
+serif: ho co chan
+sans-serif: ho khong chan
+
+Thuoc tinh text-decoration: thay doi gach ngang o van ban
+-none --> khong co gach ngang
+-underline --> gach duoi
+-overline --> gach tren
+-line-through --> gach giua chu
+
+Thuoc tinh text-transform: kieu chu ( Hoa, thuong`)
+- none --> giu nguyen ban goc
+- uppercase --> chu hoa
+- lowercase --> chu thuong
+- capitalize --> viet hoa ky tu dau tien cua moi tu
+
+Thuoc tinh letter-spacing --> khoang cach giua cac ky tu
+
+word-spacing --> khoang cach giua moi tu
+
+text-align --> can chinh van ban theo chieu ngang
+- left
+- right
+- center
+- justify
+*/
+
+
+
+@font-face {
+    font-family: "Font TVH";
+    src: url(../font/SVN-Fontbox-Boathouse-Filled.otf);
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../font/Lato-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../font/Lato-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../font/Lato-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../font/Lato-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+body{
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: underline red;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    word-wrap: break-word;
+}

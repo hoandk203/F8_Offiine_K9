@@ -1,0 +1,24 @@
+@use "../partials/variables";
+@use "../partials/mixins";
+
+.text-outline{
+    -webkit-text-stroke: 1.6666666269302368px #2C2C2C;
+}
+
+.border-custom{
+    border: 8px solid variables.$primaryColor;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    #introduce{
+        .introduce-row{
+            .section-title{
+                text-align: start;
+
+            }
+        }
+    }
+}

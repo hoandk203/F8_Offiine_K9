@@ -1,0 +1,123 @@
+/* 
+transition: tao hieu ung di chuyen muot ma voi cac thuoc tinh css
+chi ap dung voi thuoc tinh co gia tri la so
+
+- transition-property: khai bao cac thuoc tinh css muon chuyen dong
+    + all
+    + ten thuoc tinh
+    =>> moi thuoc tinh cach nhau boi dau ","
+
+    -transition-duration: thoi gian hoan thanh chuyen dong (s, ms)
+
+    -transiton-delay: thoi gian tre truoc khi chuyen dong xay ra
+
+    - transiton-timing-function: thiet lap toc do di chuyen
+        + ease(mac dinh): khoi dong cham sau do nhanh dan sau do
+        ket thuc cham
+        + ease-in: khoi dong cham, nhanh dan cho den ket thuc luon
+        + ease-out: khoi dong nhanh, sau do cham dan de luc ket thuc
+        + ease-in-out: 
+        + linear: chuyen dong deu
+
+    - cubic-bezier(p1,p2,p3,p4)
+
+    transiton: property duration timing-function
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    border: 1px solid red;
+}
+
+.box h1{
+    transition-property: padding-left, background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    
+}
+
+.box:hover h1{
+
+    padding-left: 100px;
+    background-color: brown;
+}
+
+.content{
+    display: inline-block;
+    position: relative;
+    background-color: green;
+    padding: 8px 40px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.text{
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    z-index: 2;
+    color: #fff;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 1%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.content:hover .overlay{
+    background-color: red;
+    width: 100%;
+    
+}
+
+.button{
+    background-color: gray;
+    width: 100px;
+    height: 40px;
+    border-radius: 999px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition-property: background-color, outline;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.circle{
+    position: absolute;
+    /* left: 1px; */
+    right: calc(100% - 39px);
+    top: 1px;
+    height: 38px;
+    width: 38px;
+    border-radius: 999px;
+    background-color: #fff;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+#check:checked ~ .button>.circle{
+    right: 1px;
+}
+
+#check:checked ~ .button{
+    background-color: green;
+}
+
+
+
+
+
+

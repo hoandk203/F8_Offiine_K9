@@ -1,0 +1,21 @@
+/* *{
+    color: red;
+} */
+#title{
+    color: green;
+}
+.sub-title{
+    color: red;
+}
+h3{
+    color: violet;
+}
+.box > .title{
+    color: gold;
+}
+.menu>li>a{
+    color: red;
+}
+div.content#text{
+    color: red;
+}

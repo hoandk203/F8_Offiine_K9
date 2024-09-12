@@ -1,0 +1,135 @@
+{
+    "questions":[
+        {
+            "id": 1,
+            "question": "Con chó có mấy chân?",
+            "answer": [
+                {
+                    "id": 1,
+                    "content": "2 chân",
+                    "isCorrect": false
+                },
+                {
+                    "id": 2,
+                    "content": "3 chân",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "content": "4 chân",
+                    "isCorrect": true
+                },
+                {
+                    "id": 4,
+                    "content": "5 chân",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Con chuột có mấy chân?",
+            "answer": [
+                {
+                    "id": 1,
+                    "content": "0 chân",
+                    "isCorrect": true
+                },
+                {
+                    "id": 2,
+                    "content": "1 chân",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "content": "2 chân",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "content": "4 chân",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question": "Đâu là Thủ đô kháng chiến?",
+            "answer": [
+                {
+                    "id": 1,
+                    "content": "Hà Nội",
+                    "isCorrect": false
+                },
+                {
+                    "id": 2,
+                    "content": "Điện Biên",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "content": "Thái Nguyên",
+                    "isCorrect": true
+                },
+                {
+                    "id": 4,
+                    "content": "Yên Bái",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question": "Tác giả của Bình Ngô đại cáo?",
+            "answer": [
+                {
+                    "id": 1,
+                    "content": "Trần Hưng Đạo",
+                    "isCorrect": false
+                },
+                {
+                    "id": 2,
+                    "content": "Nguyễn Trãi",
+                    "isCorrect": true
+                },
+                {
+                    "id": 3,
+                    "content": "Thái Việt Hoàn",
+                    "isCorrect": false
+                },
+                {
+                    "id": 4,
+                    "content": "Lê Lợi",
+                    "isCorrect": false
+                }
+            ]
+
+        },
+        {
+            "id": 5,
+            "question": "Người đầu tiên thống nhất Trung Hoa?",
+            "answer": [
+                {
+                    "id": 1,
+                    "content": "Lý Thế Dân",
+                    "isCorrect": false
+                },
+                {
+                    "id": 2,
+                    "content": "Thành Cát Tư Hãn",
+                    "isCorrect": false
+                },
+                {
+                    "id": 3,
+                    "content": "Doanh Chính",
+                    "isCorrect": true
+                },
+                {
+                    "id": 4,
+                    "content": "Khang Hy",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}

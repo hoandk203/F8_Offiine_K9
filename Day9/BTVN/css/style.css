@@ -1,0 +1,415 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+.py-60{
+    padding: 60px 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.active{
+    color: #f84e4f;
+}
+
+.container{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.nav-bar{
+    padding: 32px 0;
+    justify-content: space-between;
+}
+
+.nav-list ul li{
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.nav-list ul li:hover a{
+    color: #f84e4f;
+}
+
+.nav-list ul li a{
+    font-size: 1.6rem;
+}
+
+.search-and-cart{
+    box-shadow: 0 0 20px 0 #dddddda8;
+    border-radius: 999px;
+    align-content: center;
+}
+
+.header-search{
+    position: relative;
+}
+
+.header-search::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    background-color: #ddd;
+    width: 2px;
+    height: 100%;
+
+}
+
+.header-search input{
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+input:focus::placeholder{
+    opacity: 0;
+}
+
+.header-search button{
+    border: none;
+    background-color: transparent;
+    padding: 8px 8px 8px 16px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.header-search input::placeholder{
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.header-cart{
+    position: relative;
+    align-content: center;
+}
+
+.header-cart i{
+    padding: 8px 16px 8px 8px;
+    font-size: 2rem;
+}
+
+.header-cart p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: #f84e4f;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* intro ------------------------------------------------------------------------ */
+
+.section-content{
+    flex-wrap: nowrap;
+    padding: 80px 0;
+}
+
+.content-text{
+    width: 100%;
+}
+
+.slogan{
+    display: inline-flex;
+    padding: 12px 20px;
+    background-color: #fdecec;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.slogan h3{
+    font-size: 1.6rem;
+    margin-right: 12px;
+    color: #f84e4f;
+    font-weight: 500;
+}
+
+.content-img{
+    width:100%;
+}
+
+.content-img img{
+    width: 100%;
+}
+
+.content-title{
+    margin-bottom: 52px;
+}
+
+.content-title h1{
+    font-size: 7.4rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.content-title h1 span{
+    color: #f84e4f;
+    font-weight: 500;
+}
+
+.content-text p {
+    font-size: 1.8rem;
+    color: #676767;
+}
+
+.intro-order{
+    font-size: 2rem;
+
+}
+
+.intro-now-btn a, .btn-feature a{
+    padding: 20px 32px;
+    background-color: #f76061;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+}
+
+.intro-now-btn a:hover, .btn-feature a:hover{
+    color: #f84e4f;
+    background-color: transparent;
+    outline: 1px solid #f76061;
+}
+
+.intro-process-btn{
+    align-content: center;
+}
+
+.intro-process-btn i{
+    padding: 25px 35px 25px 25px;
+    color: #fdc55e;
+}
+
+/* service ----------------------------------------------------------------------- */
+
+.services{
+    background-color: #FEF5F5;
+}
+
+.service-title{
+    text-align: center;
+}
+
+.service-title h5{
+    font-size: 1.8rem;
+    color: #f84e4f;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.service-title h2{
+    font-size: 4rem;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.item-container{
+    display: flex;
+    justify-content: center;
+    width: 33.333%;
+}
+
+.service-item{
+    justify-content: center;
+    margin: 60px 0 24px 0;
+}
+
+.item{
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 48px 28px 60px;
+    margin: 0 16px;
+    max-width: 340px;
+}
+
+.service-icon{
+    height: 60px;
+    margin-bottom: 40px;
+}
+
+.service-icon img{
+    height: 100%;
+}
+
+.service-text h3{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.service-text p{
+    font-size: 1.4rem;
+    color: #676767;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* feature 1----------------------------------------------------------------------- */
+
+.content-text{
+    align-content: center;
+}
+
+.content-text h5{
+    font-size: 1.8rem;
+    color: #03A66B;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.content-text h2{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    max-width: 80%;
+}
+
+.content-text p{
+    margin-bottom: 60px;
+    font-size: 1.8rem;
+    max-width: 70%;
+}
+
+.btn-feature a{
+    font-size: 2rem;
+}
+
+/* feature 2----------------------------------------------------------------------- */
+
+.feature-2 .content-text h5{
+    color: #f9ba45;
+}
+
+/* download app----------------------------------------------------------------------- */
+
+.download-app{
+    background-color: #FEF5F5;
+}
+
+.download-app .content-img{
+    text-align: center;
+}
+
+.download-app .content-img img {
+    width: auto;
+}
+
+.download-app .content-text h5{
+    color: #f84e4f;
+}
+
+.btn-download div{
+    font-size: 4rem;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.btn-download a{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 12px 32px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+/* footer------------------------------------------------------------------------- */
+
+footer{
+    color: #676767;
+}
+
+footer a{
+    color: #676767;
+}
+
+.footer-content{
+    display: flex;
+    margin: 20px 0 60px 0;
+    padding: 20px 0;
+}
+
+.footer-logo{
+    width: 33%;
+}
+
+.footer-logo img{
+    margin-bottom: 10px;
+}
+
+.footer-nav{
+    display: flex;
+    width: 66%;
+}
+
+.footer-nav-column{
+    width: 33%;
+
+}
+
+.footer-nav-column h4{
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.footer-nav-column ul li{
+    margin-bottom: 12px;
+}
+
+.footer-logo p{
+    width: 70%;
+}
+
+.copy-right{
+    justify-content: space-between;
+}
+
+.copy-right a{
+    padding: 0 20px 0 20px;
+}

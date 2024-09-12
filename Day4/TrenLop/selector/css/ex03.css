@@ -1,0 +1,35 @@
+/* ul li a[target]{
+    color: red;
+} */
+
+/* ul li a[href="https://fullstack.edu.vn"]{
+    color: red;
+} */
+
+/* ul li a[href^="https://fullstack.edu.vn"]{
+    color: red;
+} */
+
+/* ul li a[href$=".vn"]{
+    color: red;
+} */
+
+/* ul li a[href*="fullstack.edu.vn"]{
+    color: red;
+} */
+
+/* ul li a[title~="hello"]{
+    color: red;
+} */
+
+.content #checkbox1:checked ~p{
+    color: red;
+}
+
+.content #checkbox2:checked ~p{
+    color: green;
+}
+
+.content #checkbox3:checked ~p{
+    color: blue;
+}

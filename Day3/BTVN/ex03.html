@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .form-login{
+            background-color: lightgray;
+            max-width: 30%;
+            overflow-x: auto;
+        }
+        .form-login label{
+            display: block;
+        }
+        .form-login input[type=text], input[type=password]{
+            width: 100%;
+        }
+        .form-login table td{
+            padding: 4px;
+        }
+        .form-login table td:first-child {
+            width: 30%;
+        }
+        #btn-row{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Đầu trang -->
+    <header>
+
+    </header>
+    <!-- Nội dung trang -->
+    <main>
+        <!-- Phần form đăng nhập -->
+        <div class="form-login">
+            
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>City of Employment:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="cityemployment">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Web server:</label>
+                        </td>
+                        <td>
+                            <select name="server">
+                                <option hidden>- Choose a server -</option>
+                                <option value="1">Server 1</option>
+                                <option value="2">Server 2</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Please specify your role:</label>
+                        </td>
+                        <td>
+                            <label><input type="radio" name="role" value="admin">Admin</label>
+                            <label><input type="radio" name="role" value="engineer">Engineer</label>
+                            <label><input type="radio" name="role" value="manager">Manager</label>
+                            <label><input type="radio" name="role" value="guest">Guest</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Single Sign-on to the following:</label>
+                        </td>
+                        <td>
+                            <label><input type="checkbox" name="sso" value="mail">Mail</label>
+                            <label><input type="checkbox" name="sso" value="payroll">Payroll</label>
+                            <label><input type="checkbox" name="sso" value="selfservice">Self-service</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="btn-row" colspan="2">
+                            <button type="submit">Login</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!-- Chân trang -->
+    <footer>
+
+    </footer>
+</body>
+</html>

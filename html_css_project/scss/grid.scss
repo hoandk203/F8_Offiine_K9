@@ -1,0 +1,82 @@
+$containerWidth: 1200px;
+$containerPadding: 15px;
+$columnSpace: 20px;
+$maxColumn: 12;
+
+$breakpoint:(
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    2xl: 1536
+);
+
+@mixin column($name: ""){
+    @for $i from 1 through $maxColumn{
+        $selectorCol: ".col-";
+        $selectorOffset: ".offset-";
+
+        @if ($name != ""){
+            $selectorCol: $selectorCol + $name + "-";
+            $selectorOffset: $selectorOffset + $name + "-";
+        }
+        #{$selectorCol + $i}{
+            flex-basis: calc(100% / 12 * $i);
+            max-width: calc(100% / 12 * $i);
+        }
+        #{$selectorOffset + $i}{
+            flex-basis: calc(100% / 12 * $i);
+            max-width: calc(100% / 12 * $i);
+        }
+
+    }
+}
+
+.container{
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 $containerPadding;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+[class^="col-"]{
+    padding: 0 $columnSpace / 2 $columnSpace;
+}
+
+@include column();
+
+@each $name, $size in $breakpoint{
+    
+    
+        @media screen and (min-width: #{$size + px}) {
+            $containerSizes:(
+                sm: 540,
+                md: 720,
+                lg: 960,
+                xl: 1200,
+                xxl: 1320
+            );
+            @each $containerName, $containerSize in $containerSizes{
+                @if ( $containerName == $name ) {
+                    $selectorContainer: ".container-" + $name;
+                    #{$selectorContainer}{
+                        max-width: $containerSize + px;
+                    }
+                }
+            }
+            @include column($name);
+        }
+    
+    
+}
+
+@media screen and (min-width: #{$containerWidth + 100}) {
+    .container{
+        padding: 0;
+    }
+}

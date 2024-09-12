@@ -1,0 +1,11 @@
+/* 
+Shape CSS
+*/
+
+.container{
+    width: 0px;
+    height: 0px;
+    border: 50px solid;
+    border-color: #d6595900 rgba(0, 128, 0, 0) blue rgba(138, 44, 226,0);
+    border-top: 0;
+}

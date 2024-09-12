@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 1024px;
+        margin: 100px auto;
+    }
+
+    .image {
+        display: inline-block;
+        position: relative;
+    }
+
+    .show {
+        display: inline-block;
+        visibility: hidden;
+        overflow: hidden;
+
+    }
+
+    .zoom-frame {
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        inset: 0;
+        visibility: hidden;
+        user-select: none;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="image">
+
+            <img src="https://picsum.photos/500/300" alt="">
+            <div class="zoom-frame"></div>
+            <div class="overlay"></div>
+        </div>
+        <div class="show">
+            <img src="https://picsum.photos/500/300" alt="">
+        </div>
+    </div>
+
+    <script src="./js/zoom.js"></script>
+</body>
+
+</html>

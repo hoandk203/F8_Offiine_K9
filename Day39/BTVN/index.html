@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 768px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            background-color: cornflowerblue;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: #fff;
+            margin-top: 20px;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: coral;
+            transition: background-color 0.2s ease;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bạn muốn nói gì?</h1>
+        <button class="btn">Click để nói</button>
+        <div class="message1 message"></div>
+        <div class="message2 message"></div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

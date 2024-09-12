@@ -1,0 +1,48 @@
+/* 
+Thuộc tính float: làm trôi các thẻ html về phía trái hoặc phải của thẻ cha
+-none
+- left
+- right
+*/
+
+.box{
+    border: 1px solid red;
+    width: 400px;
+    margin: 30px auto;
+    overflow: auto;
+}
+
+.item-1{
+    width: 20%;
+    height: 100px;
+    background-color: green;
+    float: right;
+}
+
+.item-2{
+    width: 20%;
+    height: 100px;
+    background-color: red;
+    float: right;
+}
+
+.item-3{
+    width: 20%;
+    height: 50px;
+    background-color: blueviolet;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.box p{
+    clear: both;
+}
+
+.box a{
+    background-color: green;
+    color: #fff;
+
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: transform 1s ease;
+}
+
+.wrapper{
+    border: 1px solid red;
+    padding: 50px;
+    position: relative;
+
+}
+
+.left, .right{
+    background-color: green;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 10px;
+}
+
+.wrapper:hover .box{
+    transform: skew(60deg);
+    
+}
+
+
+
+/* 
+Thuoc tinh transform: thay doi hinh dang cac the html
+(xoay, phong' to, thu nho, nghieng, di chuyen)
+
+-rotate (angle): xoay theo truc z
+- rotatex: xoay theo truc x
+- rotatey: xoay theo truc y
+
+- scale (x, y): phong to thu nho theo truc x, y
+(x, y) la ty le thu, phong, VD: (1.5, 2)
+-scalex(value): thu, phong theo x
+-scaley(value): thu, phong theo y
+
+- skew(angleX, angleY): nghieng theo truc x, y
+- skewX(angle): nghieng theo truc x
+- skewY(angle): nghieng theo truc y
+
+- translate(x, y): di chuyen the html toi vi tri moi, khong
+thay doi bo cuc 
+- translateX(value): di chuyen theo truc x
+- translateY(value(: di chuyen theo truc y
+
+* cac thuoc tinh duoc tach ra
+- rotate() >> tuong tu transform: rotate()
+- scale() >> tuong tu transform: scale()
+- translate() >> tuong tu transform: translate()
+
+*/

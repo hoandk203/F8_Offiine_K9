@@ -1,0 +1,50 @@
+@use "../partials/variables";
+@use "../partials/mixins";
+
+.layout-grid {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 70px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "news1"
+        "img1"
+        "news2"
+        "img2";
+
+    .news-img-1{
+        grid-area: img1;
+    }
+
+    .news-text-1{
+        grid-area: news1;
+    }
+
+    .news-text-2{
+        grid-area: news2;
+    }
+
+    .news-img-2{
+        grid-area: img2;
+    }
+
+}
+
+.active{
+    color: variables.$primaryColor;
+}
+
+@media screen and (min-width:768px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.4fr 0.2fr 1.4fr;
+        gap: 0px 55px;
+        grid-template-areas:
+            "img1 news1"
+            "img1 img2"
+            "news2 img2";
+    
+    }
+}
+      

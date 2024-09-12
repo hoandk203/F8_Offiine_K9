@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="stylesheet" href="../css/tailwind.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="header-row d-flex">
+                <div class="logo">
+                    <a href="#"><img src="../images/logo.svg" alt="logo" /></a>
+                </div>
+                <label for="toggle-menu" class="toggle-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <input type="checkbox" id="toggle-menu" hidden />
+                <div class="header-responsive">
+                    <div class="header-nav">
+                        <ul>
+                            <li>
+                                <a class="d-inline-block active" href="#"
+                                    >Trang chủ</a
+                                >
+                            </li>
+                            <li>
+                                <a class="d-inline-block" href="#"
+                                    >Về Greenchop</a
+                                >
+                            </li>
+                            <li>
+                                <a class="d-inline-block" href="#">Sản phẩm</a>
+                            </li>
+                            <li>
+                                <a class="d-inline-block" href="#">Tin tức</a>
+                            </li>
+                            <li>
+                                <a class="d-inline-block" href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cart-and-search d-flex">
+                        <div class="header-cart">
+                            <a href="#"
+                                ><i class="fa-regular fa-cart-shopping"></i
+                            ></a>
+                        </div>
+                        <div class="header-search">
+                            <form class="d-flex" action="index.html">
+                                <label
+                                    for="toggle-header-search"
+                                    class="fa-solid fa-magnifying-glass"
+                                ></label>
+                                <input
+                                    type="checkbox"
+                                    id="toggle-header-search"
+                                    hidden
+                                />
+                                <div>
+                                    <input
+                                        type="text"
+                                        name="header-search"
+                                        placeholder="Search..."
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="breadcrumb">
+                <div class="breadcrumb-link">
+                    <h2
+                        class="text-[2.4rem] sm:text-[2.8rem] lg:text-[3.2rem] xl:text-[4.4rem] font-bold"
+                    >
+                        Về Greenchop
+                    </h2>
+                </div>
+            </section>
+
+            <!-- achievement -->
+            <section id="achievement">
+                <div
+                    class="container container-sm container-md container-lg container-xl"
+                >
+                    <div class="pt-60">
+                        <div class="section-title">
+                            <h3>
+                                GreenChop: Giữ an toàn trong từng bữa ăn của
+                                người Việt
+                            </h3>
+                            <p>
+                                Với sự tinh tế trong việc thấu hiểu hành vi của
+                                khách hàng cùng ý tưởng đột phá, GreenChop đã
+                                trở thành sản phẩm không thể thiếu trong mọi bữa
+                                ăn mùa dịch tại các nhà hàng, khách sạn, quán
+                                ăn...
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-3">
+                                <div class="achievement-item">
+                                    <div class="achievement-img bg-green">
+                                        <img
+                                            src="../images/achievement-img.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="achievement-amount">
+                                        <p>600+</p>
+                                    </div>
+                                    <div class="achievement-description">
+                                        <p>
+                                            Nhà hàng đã phục vụ GreenChop cho
+                                            thực khách
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <div class="achievement-item">
+                                    <div class="achievement-img bg-pink">
+                                        <img
+                                            src="../images/achievement-img.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="achievement-amount">
+                                        <p>1000+</p>
+                                    </div>
+                                    <div class="achievement-description">
+                                        <p>Hộ gia đình tin dùng GreenChop</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <div class="achievement-item">
+                                    <div class="achievement-img bg-pink">
+                                        <img
+                                            src="../images/achievement-img.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="achievement-amount">
+                                        <p>20+</p>
+                                    </div>
+                                    <div class="achievement-description">
+                                        <p>
+                                            Tỉnh thành được GreenChop phủ sóng
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about">
+                <div
+                    class="container container-sm container-md container-lg container-xl"
+                >
+                    <div class="pt-60">
+                        <div class="section-title">
+                            <h3>Về GreenChop</h3>
+                        </div>
+                        <div class="about-row row">
+                            <div class="col-12 col-md-6">
+                                <div class="about-text">
+                                    <p>
+                                        Dù chỉ mới ra mắt từ đầu mùa dịch Covid
+                                        2021, thương hiệu GreenChop đã trở thành
+                                        đối tác cung cấp sản phẩm đũa ăn tin cậy
+                                        cho những tên tuổi lớn trong phân khúc
+                                        nhà hàng, khách sạn, quán ăn,... tại
+                                        Việt Nam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="about-img">
+                                    <img
+                                        src="../images/about-img/about-img-1.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="about-text">
+                                    <p>
+                                        GreenChop - Tiện gấp dễ gắp: An toàn hơn
+                                        với Covid <br />
+                                        <br />
+
+                                        Sản phẩm chính của công ty là đũa thay
+                                        đầu GreenChop. Đây chính là cái tên đã
+                                        giúp các nhà hàng, khách sạn, quán ăn...
+                                        đã dần lấy lại được sự tin tưởng của
+                                        thực khách giữa mùa Covid. Đũa thay đầu
+                                        là ý tưởng đột phá và tinh tế được xây
+                                        dựng từ việc thấu hiểu hành vi ăn uống
+                                        của khách hàng của đội ngũ GreenChop.
+                                        Sản phẩm giúp người dùng đảm bảo tối đa
+                                        sự riêng tư, giãn cách và an toàn trong
+                                        bữa ăn, từ đó, xoa dịu tâm lý ngại “ăn
+                                        ngoài” của khách hàng.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="about-img">
+                                    <img
+                                        src="../images/about-img/about-img-2.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="about-text">
+                                    <p>
+                                        Không chỉ là các chuỗi nhà hàng, khách
+                                        sạn,..., nhiều người tiêu dùng cũng đã
+                                        tin tưởng và chọn lựa GreenChop như một
+                                        người bạn đồng hành không thể thiếu cùng
+                                        gia đình của mình.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="about-img">
+                                    <img
+                                        src="../images/about-img/about-img-3.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BANNER -->
+            <section id="banner">
+                <div class="container">
+                    <div class="section-title">
+                        <h3>Sản phẩm chính của GreenChop</h3>
+                        <p>
+                            GreenChop đã nghiên cứu tâm lý ăn uống của người
+                            Việt để cho ra được sản phẩm với cấu trúc thông minh
+                            và thiết kế tinh tế. Đũa xanh GreenChop cho phép
+                            người dùng dễ dàng tháo lắp đầu và thân đũa. Việc
+                            thay thế đầu đũa mới trong mỗi bữa ăn giúp đảm bảo
+                            tính riêng tư và tối thiểu khả năng bị lây virus
+                            Covid cũng như các vi khuẩn gây bệnh khác. Sản phẩm
+                            đảm bảo thân thiện với môi trường và bảo vệ sức khỏe
+                            của người dùng với đầu đũa bằng gỗ tre được khử
+                            khuẩn 100%.
+                            <img src="../images/about-img/open.svg" alt="" />
+                            <img src="../images/about-img/close.svg" alt="" />
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MISSION -->
+            <section id="mission">
+                <div
+                    class="container container-sm container-md container-lg container-xl"
+                >
+                    <div class="pt-100 pb-200">
+                        <div class="mission-row row">
+                            <div class="col-12 col-md-6">
+                                <div class="section-title">
+                                    <h3>Sứ mệnh của GreenChop</h3>
+                                    <p>
+                                        Đội ngũ GreenChop gồm những người trẻ
+                                        năng động và luôn mong muốn cống hiến
+                                        cho sức khỏe cộng đồng Việt Nam. Trên
+                                        tiêu chí đó, GreenChop đã và đang tiếp
+                                        tục góp sức trong công cuộc chống dịch
+                                        hiện tại và nhu cầu vệ sinh thực phẩm
+                                        lâu dài. Trong tương lai, thương hiệu sẽ
+                                        tiếp tục phát triển những dụng cụ ăn
+                                        uống cá nhân thông minh. Cùng với sự ủng
+                                        hộ của các đối tác và thực khách,
+                                        GreenChop hứa hẹn sẽ xây dựng những thói
+                                        quen và môi trường ăn uống an toàn cho
+                                        người Việt.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mission-img">
+                                    <img
+                                        src="../images/about-img/two-circle.svg"
+                                        alt=""
+                                    />
+                                    <img
+                                        src="../images/about-img/teach.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content row">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="footer-col">
+                            <a href="#"
+                                ><img
+                                    src="../images/logo.svg"
+                                    alt="logo-green-chop"
+                            /></a>
+                            <p>
+                                GreenChop là bạn đồng hành của người tiêu dùng
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="footer-col">
+                            <h4>Trang chủ</h4>
+                            <ul>
+                                <li><a href="#">Về greenchop</a></li>
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="footer-col">
+                            <h4>Hỗ trợ</h4>
+                            <ul>
+                                <li>Đặt hàng trực tuyến (8h-22h)</li>
+                                <li class="font-bold">
+                                    <i class="fa-regular fa-alarm-clock"></i>Thứ
+                                    2 - Thứ 6
+                                </li>
+                                <li class="font-bold">
+                                    <i class="fa-regular fa-phone"></i>091 1717
+                                    222
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <div class="footer-col">
+                            <h4>Liên hệ</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa-regular fa-envelope"></i
+                                    >greenchopvn@gmail.com
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-globe"></i
+                                    >Greenchop.vn
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-location-dot"></i
+                                    >428 Điện Biên Phủ, P11, Quận 10, TPHCM
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit row">
+                    <div class="social-contact d-flex">
+                        <a href="#"
+                            ><div class="social-icon">
+                                <i class="fa-brands fa-youtube"></i></div
+                        ></a>
+                        <a href="#"
+                            ><div class="social-icon">
+                                <i class="fa-brands fa-facebook"></i></div
+                        ></a>
+                        <a href="#"
+                            ><div class="social-icon">
+                                <i
+                                    class="fa-brands fa-square-instagram"
+                                ></i></div
+                        ></a>
+                        <a href="#"
+                            ><div class="social-icon">
+                                <i class="fa-brands fa-twitter"></i></div
+                        ></a>
+                    </div>
+                    <div class="credit-img">
+                        <img src="../images/certification.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

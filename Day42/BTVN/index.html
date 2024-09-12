@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title"><span>Smatyx</span> Todos App</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-input">
+                <input type="text" placeholder="Search Todos" id="searchInput">
+                <i class="fa-solid fa-magnifying-glass search-icon" id="searchButton"></i>
+            </div>
+            <div class="form-btn"><button type="button" class="btn-green">Add</button></div>
+        </div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="modal-container">
+                <form class="modal-form">
+                    <input class="input-task" type="text" placeholder="Add todo">
+                    <div class="modal-action">
+                        <button type="submit" class="save-btn btn-green">Save</button>
+                        <button type="button" class="close-modal-btn btn-green">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="error-message">
+            <p></p>
+        </div>
+        <div class="todo-container">
+            <div class="todo-list">
+
+            </div>
+            <button type="button" class="toggle-todos-completed btn-green">
+                <p class="amount-completed">Completed Todos</p>
+                <i class="fa-regular fa-circle-arrow-right"></i>
+            </button>
+            <div class="todo-completed">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

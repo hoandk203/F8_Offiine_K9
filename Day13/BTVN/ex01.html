@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ex01.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+    <div class="vikinger">
+        <div class="overlay"></div>
+        <div class="container-320 container-420 container-sm container-xl container-xxl">
+            <div class="content row">
+
+                <!-- VIKING-TEXT -->
+                <input type="radio" name="toggle" id="login-toggle" checked hidden>
+                <input type="radio" name="toggle" id="register-toggle" hidden>
+                <div class="col-12 col-sm-12 col-xl-6 viking-text">
+                    <div class="logo">
+                        <i class="fa-brands fa-space-awesome"></i>
+                    </div>
+
+                    <div class="welcome">
+                        <p class="welcome-to">Welcome to</p>
+                        <h1 class="page-name">Vikinger</h1>
+                        <p>The next generation social network & community! Connect with your friends and play with our quests and badges gamification system!</p>
+                    </div>
+
+                    <div class="toggle-btn row">
+                        <input type="radio" name="toggle-color" id="login-toggle-color" hidden>
+                        <label for="login-toggle" class="col-6 btn login-toggle">
+                                Login
+                        </label>
+                        <input type="radio" name="toggle-color" id="register-toggle-color" hidden>
+                        <label for="register-toggle" class="col-6 btn register-toggle">
+                                Resgister
+                        </label>
+                    </div>
+                </div>
+                <!-- END VIKING-TEXT -->
+
+                <!-- VIKING-FORM -->
+                <div class="col-12 col-sm-12 col-xl-6 viking-form">
+                    <!-- LOGIN-FORM -->
+                    <div class="login-form">
+                        <div class="rocket">
+                            <img src="img/rocket.webp" alt="aa">
+                        </div>
+                        <form action="">
+                            <div class="form-name">
+                                <h3>Account Login</h3>
+                            </div>
+
+                            <div class="form-input">
+                                <div><input type="text" id="username-email-login" name="username-email-login" required><label class="placeholder" for="username-email-login">Username or email</label></div>
+                                <div><input type="password" id="password-login" name="password-login" required><label class="placeholder" for="password-login">Password</label></div>
+                            </div>
+
+                            <div class="remember-and-forgot row">
+                                <label for="remember">
+                                    <input type="checkbox" id="remember" hidden>
+                                    <div class="check-btn">
+                                        <i class="fa-solid fa-x"></i>
+                                    </div>
+                                    <p>Remember Me</p>
+                                </label>
+                                <div class="forgot-password">
+                                    <a href="#">Forgot Password</a>
+                                </div>
+                            </div>
+
+                            <div class="submit-login">
+                                <button type="submit">Login to your Account!</button>
+                            </div>
+
+                            <div class="social-account">
+                                <p>Login with your Social Account</p>
+                                <div class="social-icon row">
+                                    <a href="#"><div class="facebook-icon"><i class="fa-brands fa-square-facebook"></i></div></a>
+                                    <a href="#"><div class="twitter-icon"><i class="fa-brands fa-twitter"></i></div></a>
+                                    <a href="#"><div class="twitch-icon"><i class="fa-brands fa-twitch"></i></div></a>
+                                    <a href="#"><div class="youtube-icon"><i class="fa-brands fa-youtube"></i></div></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END LOGIN-FORM -->
+
+                    <!-- REGISTER-FORM -->
+                    <div class="register-form">
+                        <div class="rocket">
+                            <img src="img/rocket.webp" alt="aa">
+                        </div>
+                        <form action="">
+                            <div class="form-name">
+                                <h3>Create your Account</h3>
+                            </div>
+
+                            <div class="form-input">
+                                <div><input type="email" id="email-register" name="email-register" required><label class="placeholder" for="email-register">Email</label></div>
+                                <div><input type="text" id="username-register" name="username-register" required><label class="placeholder" for="username-register">Username</label></div>
+                                <div><input type="password" name="password-register" id="password-register" required><label class="placeholder" for="password-register">Password</label></div>
+                                <div><input type="password" name="repeat-password" id="repeat-password" required><label class="placeholder" for="repeat-password">Repeat Password</label></div>
+                            </div>
+
+                            <div class="remember-and-forgot">
+                                <label for="send-email">
+                                    <input type="checkbox" id="send-email" hidden>
+                                    <div class="check-btn">
+                                        <i class="fa-solid fa-x"></i>
+                                    </div>
+                                    <p>Send me news and updates via email</p>
+                                </label>
+                            </div>
+
+                            <div class="submit-register">
+                                <button type="submit">Register Now!</button>
+                            </div>
+
+                            <div class="message">
+                                <p>You'll receive a confirmation email in your 
+                                    inbox with a link to activate your 
+                                    account. If you have any 
+                                    problems, <a href="#">contact us</a>!</p>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- END REGISTER-FORM -->
+
+                </div>
+                <!-- END VIKING-FORM -->
+                <!-- <div class="form-height"></div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/cd5ccb40a0.js" crossorigin="anonymous"></script>
+</body>
+</html>

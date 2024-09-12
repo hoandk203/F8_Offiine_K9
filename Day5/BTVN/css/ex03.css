@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+#services{
+    padding-top: 2rem;
+}
+
+.container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-header{
+    text-align: center;
+    margin-bottom: 8rem;
+    line-height: 2;
+}
+
+.services-header h2{
+    font-size: 3.2rem;
+}
+
+.services-header p{
+    font-size: 1.6rem;
+}
+
+.services-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.content{
+    width: 31%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 3.2rem 3.2rem 6rem 3.2rem;
+    text-align: center;
+    line-height: 1.5;
+    min-width: 200px;
+}
+
+
+.content-icon{
+    margin: 0 auto 0 auto;
+    color: #f2a93b;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-icon > i{
+    border: 1px solid #f2a93b;
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.content-title{
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-description{
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    color: rgba(0,0,0,0.5);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.content-btn a{
+    color: #fff;
+    text-decoration: none;
+    background-color: #f2a93b;
+    padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+    font-size: 1.6rem;
+}
