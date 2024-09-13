@@ -1,33 +1,45 @@
-let currentQuestion = 1;
 const totalQuestions = 5;
+let currentQuestion;
+let questionNumber = 1;
+
+let questionNumberArray = [];
+
 let scoreStreak = 0;
 let score = 0;
 let streakProgress = 0;
 let streakLevel = 0;
+let streakLevelMax = [];
 let gameCorrect = 0;
 let gameIncorrect = 0;
 
 const renderContent = async () => {
     renderLoading();
+    currentQuestion = Math.ceil(Math.random() * totalQuestions);
+
+    const randomQuestion = () => {
+        if (!questionNumberArray.includes(currentQuestion)) {
+            questionNumberArray.push(currentQuestion);
+        } else {
+            currentQuestion = Math.ceil(Math.random() * totalQuestions);
+            randomQuestion();
+        }
+    };
+    randomQuestion();
+
     content.classList.remove("flex", "justify-center", "items-center");
-    const question = await getQuestions(currentQuestion);
+    await loadQuestions(currentQuestion);
+    const question = await getQuestions();
+
     if (question && question.length > 0) {
-        const questionData = question[currentQuestion - 1];
-        if (questionData.id === 1) {
-            score = scoreStreak + 0;
-        } else if (questionData.id >= 1 && currentAnswer.isCorrect) {
-            score += scoreStreak + 300;
-        }
-        if (scoreStreak >= 0) {
-            streakProgress = (scoreStreak / 300) * 100;
-        }
+        const questionData = await question[0];
+
         content.innerHTML = `
         <div class="game-info flex flex-col justify-between items-center p-8 bg-black text-white">
             <div class="timer w-full h-[5px] bg-white rounded-full mb-3"></div>
             <div class="flex justify-between w-full">
                 <div class="flex justify-between gap-x-3">
                     <div class="amount-quiz ">
-                        <p class="p-2 bg-gray-500 rounded-full">${currentQuestion}/${totalQuestions}</p>
+                        <p class="p-2 bg-gray-500 rounded-full">${questionNumber}/${totalQuestions}</p>
                     </div>
                     <div class="streak flex items-center gap-x-2.5">
                         <div class="streak-level">
@@ -86,7 +98,9 @@ const renderGamePerformance = () => {
             </div>
             <div class="game-performance-content flex justify-between flex-wrap">
                 <div class="w-[50%]">Score: <span id="game-score">${score}</span></div>
-                <div class="w-[50%]">Streak: <span id="game-streak">${streakLevel}</span></div>
+                <div class="w-[50%]">Streak: <span id="game-streak">${Math.max(
+                    ...streakLevelMax
+                )}</span></div>
                 <div class="w-[50%]">Correct: <span id="game-correct">${gameCorrect}</span></div>
                 <div class="w-[50%]">Incorrect: <span id="game-incorrect">${gameIncorrect}</span></div>
             </div>

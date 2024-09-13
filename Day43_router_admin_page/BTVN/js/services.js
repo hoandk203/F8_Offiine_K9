@@ -1,11 +1,18 @@
-const getQuestions = async (page = 1) => {
-    return await getMethod(`questions?limit=1&page=${page}`);
+let questionList = [];
+
+const loadQuestions = async (page) => {
+    const questions = await getMethod(`questions?_limit=1&_page=${page}`);
+    questionList.push(...questions);
+};
+
+const getQuestions = async () => {
+    return questionList;
 };
 
 let currentAnswer;
 const onAnswerClick = async (id) => {
-    const question = await getQuestions(currentQuestion);
-    const questionData = question[currentQuestion - 1];
+    const question = await getQuestions();
+    const questionData = question[0];
     // xoa onclick sau khi chon dap an
     const allAnswer = document.querySelectorAll(".answer button");
     allAnswer.forEach((ans) => {
@@ -29,6 +36,16 @@ const onAnswerClick = async (id) => {
         if (scoreStreak < 300) {
             scoreStreak += 100;
         }
+
+        if (questionData.id === 1) {
+            score = scoreStreak + 300;
+        } else if (questionData.id >= 1 && currentAnswer.isCorrect) {
+            score += scoreStreak + 300;
+        }
+        if (scoreStreak >= 0) {
+            streakProgress = (scoreStreak / 300) * 100;
+        }
+        questionNumber += 1;
         streakLevel += 1;
         gameCorrect += 1;
         currentAnswerElement.classList.add("bg-green-500");
@@ -51,6 +68,13 @@ const onAnswerClick = async (id) => {
     } else {
         scoreStreak = 0;
         gameIncorrect += 1;
+        questionNumber += 1;
+        streakLevelMax.push(streakLevel);
+
+        streakLevel = 0;
+        if (scoreStreak >= 0) {
+            streakProgress = (scoreStreak / 300) * 100;
+        }
         currentAnswerElement.classList.add("bg-red-500");
         const inCorrectAnswer = document.createElement("div");
         inCorrectAnswer.innerHTML = "Incorrect Answer!";
@@ -71,8 +95,7 @@ const onAnswerClick = async (id) => {
     }
 
     // chuyen den cau hoi tiep theo
-    if (currentQuestion < totalQuestions) {
-        currentQuestion++;
+    if (questionNumber <= totalQuestions) {
         setTimeout(() => {
             renderContent();
         }, 1000);
@@ -81,20 +104,24 @@ const onAnswerClick = async (id) => {
             renderGamePerformance();
         }, 1000);
     }
+    questionList = [];
 };
 
 const onPlayAgainClick = () => {
     currentQuestion = 1;
+    questionNumber = 1;
     scoreStreak = 0;
     score = 0;
     streakProgress = 0;
     streakLevel = 0;
+    streakLevelMax = [];
     gameCorrect = 0;
     gameIncorrect = 0;
+    questionNumberArray = [];
     renderStartGame();
 };
 
-const onStartClick = () => {
+const onStartClick = async () => {
     const timerStart = document.querySelector(".timer-start");
     const startBtn = document.querySelector(".start-btn");
     startBtn.style.display = "none";
