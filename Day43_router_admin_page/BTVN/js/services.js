@@ -19,7 +19,7 @@ const onAnswerClick = async (id) => {
         ans.removeAttribute("onclick");
     });
 
-    // them background cho dap an dung
+    // them background cho dap an dungg
     questionData.answer.forEach((ans) => {
         if (ans.id == id) {
             currentAnswer = ans;
