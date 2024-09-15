@@ -4,7 +4,7 @@ const onRegister = async () => {
     const password = document.getElementById("password").value;
     const data = await requestRegister("master/user", name, email, password);
     if (data) {
-        router.navigate("/BTVN/login");
+        router.navigate("/login");
     }
 };
 
@@ -15,7 +15,7 @@ const onLogin = async () => {
     const data = await requestLogin("login", email, password);
     if (data) {
         localStorage.setItem("userToken", JSON.stringify(data));
-        router.navigate("/BTVN");
+        router.navigate("/");
     } else {
         const msg = document.querySelector(".msg");
         msg.style.display = "block";
@@ -25,7 +25,7 @@ const onLogin = async () => {
 
 const onLogout = async () => {
     localStorage.removeItem("userToken");
-    router.navigate("/BTVN/login");
+    router.navigate("/login");
 };
 
 const onPost = async () => {
