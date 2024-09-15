@@ -5,9 +5,8 @@ const loginPage = () => {
             <div class="introduct">
                     <h1>Đăng nhập</h1>
                     <p>
-                        Bạn muốn tham gia cộng đồng Blogger, nơi bạn có thể tạo và chia sẻ những bài viết độc đáo của mình? Hãy điền thông tin của bạn vào biểu mẫu dưới đây để tạo tài khoản miễn phí. Bạn sẽ nhận được nhiều ưu đãi, thông tin mới nhất và cơ hội giao lưu với những blogger khác khi đăng ký. Đừng bỏ lỡ cơ hội này, hãy đăng ký ngay! Nếu bạn chưa có tài khoản, <a href="/register" class="link">Đăng ký ngay!</a>
+                        Bạn muốn tham gia cộng đồng Blogger, nơi bạn có thể tạo và chia sẻ những bài viết độc đáo của mình? Hãy điền thông tin của bạn vào biểu mẫu dưới đây để tạo tài khoản miễn phí. Bạn sẽ nhận được nhiều ưu đãi, thông tin mới nhất và cơ hội giao lưu với những blogger khác khi đăng ký. Đừng bỏ lỡ cơ hội này, hãy đăng ký ngay! Nếu bạn chưa có tài khoản, <a onclick="router.navigate("/register")" class="link">Đăng ký ngay!</a>
                     </p>
-                    // <div class="back-to-home"><a href="/" class="link">Về trang chủ</a></div>
                 </div>
                 <div class="form-container">
                     <form>
@@ -34,9 +33,8 @@ const registerPage = () => {
             <div class="introduct">
                     <h1>Đăng ký</h1>
                     <p>
-                        Bạn muốn tham gia cộng đồng Blogger, nơi bạn có thể tạo và chia sẻ những bài viết độc đáo của mình? Hãy điền thông tin của bạn vào biểu mẫu dưới đây để tạo tài khoản miễn phí. Bạn sẽ nhận được nhiều ưu đãi, thông tin mới nhất và cơ hội giao lưu với những blogger khác khi đăng ký. Đừng bỏ lỡ cơ hội này, hãy đăng ký ngay! Nếu bạn đã có tài khoản, <a href="/login" class="link">Đăng nhập ngay!</a>
+                        Bạn muốn tham gia cộng đồng Blogger, nơi bạn có thể tạo và chia sẻ những bài viết độc đáo của mình? Hãy điền thông tin của bạn vào biểu mẫu dưới đây để tạo tài khoản miễn phí. Bạn sẽ nhận được nhiều ưu đãi, thông tin mới nhất và cơ hội giao lưu với những blogger khác khi đăng ký. Đừng bỏ lỡ cơ hội này, hãy đăng ký ngay! Nếu bạn đã có tài khoản, <a onclick="router.navigate("/login");" class="link">Đăng nhập ngay!</a>
                     </p>
-                    // <div class="back-to-home"><a href="/BTVN" class="link">Về trang chủ</a></div>
                 </div>
                 <div class="form-container">
                     <form>
