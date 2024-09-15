@@ -1,8 +1,5 @@
 const app = document.querySelector("#app");
-const router = new Navigo(
-    "/F8_Offiine_K9/Day44_local_sess_cookie_jwt_auth/BTVN/",
-    { linksSelector: "a" }
-);
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
 const render = async (position, content) => {
     const result = typeof content === "function" ? await content() : content();
