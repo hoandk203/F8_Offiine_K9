@@ -91,6 +91,27 @@ const homePage = async () => {
         localStorage.getItem("userToken")
     );
     const posts = await requestPost("post", accessToken);
+    let postsList = `<tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Action</th>
+                    </tr>`;
+    if (posts.length > 0) {
+        posts.forEach((post) => {
+            postsList += `<tr>
+                <td>${post.id}</td>
+                <td>${post.title}</td>
+                <td>${post.content}</td>
+                <td>
+                    <button class="edit-post"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete-post"><i class="fa-solid fa-trash"></i></button>
+                </td>
+            </tr>`;
+        });
+    } else {
+        postsList = "Bạn chưa có bài viết nào. Hãy đăng bài đi!";
+    }
 
     if (posts) {
         const html = `<div class="container">
@@ -129,25 +150,8 @@ const homePage = async () => {
           <div class="container">
             <div class="post-list">
                 <table border="1px">
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Content</th>
-                        <th>Action</th>
-                    </tr>
-                    ${posts
-                        .map(
-                            (post) => `<tr>
-                            <td>${post.id}</td>
-                            <td>${post.title}</td>
-                            <td>${post.content}</td>
-                            <td>
-                                <button class="edit-post"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="delete-post"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>`
-                        )
-                        .join("")}
+                    
+                    ${postsList}
                 </table>
             </div>
           </div>`;

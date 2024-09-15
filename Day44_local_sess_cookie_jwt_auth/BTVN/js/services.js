@@ -103,9 +103,10 @@ const getPostList = async () => {
     );
     try {
         const data = await requestPost("post", accessToken);
-        postList = data
-            .map(
-                (post) => `<tr>
+        if (data.length > 0) {
+            postList = data
+                .map(
+                    (post) => `<tr>
                 <td>${post.id}</td>
                 <td>${post.title}</td>
                 <td>${post.content}</td>
@@ -114,15 +115,18 @@ const getPostList = async () => {
                     <button class="delete-post"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>`
-            )
-            .join("");
-        document.querySelector(".post-list table").innerHTML = `<tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Content</th>
-                        <th>Action</th>
-                    </tr>
-                    ${postList}`;
+                )
+                .join("");
+        }
+        if (data.length > 0) {
+            document.querySelector(".post-list table").innerHTML = `<tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Content</th>
+                            <th>Action</th>
+                        </tr>
+                        ${postList}`;
+        }
     } catch (error) {
         console.log(error);
     }
