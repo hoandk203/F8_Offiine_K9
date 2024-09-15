@@ -78,3 +78,11 @@ const getPostList = async () => {
         console.log(error);
     }
 };
+
+const toLoginPage = () => {
+    router.navigate("/login");
+};
+
+const toRegisterPage = () => {
+    router.navigate("/register");
+};
