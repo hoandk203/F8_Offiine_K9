@@ -1,4 +1,17 @@
-const loginPage = () => {
+const loginPage = (errorMessage) => {
+    if (localStorage.getItem("userToken")) {
+        router.navigate("/");
+    }
+
+    let display;
+    if (errorMessage) {
+        errorMessage = `Email hoặc mật khẩu không đúng.`;
+        display = "block";
+    } else {
+        errorMessage = "";
+        display = "none";
+    }
+
     return `
     <div class="container">
         <div class="auth-page">
@@ -10,11 +23,13 @@ const loginPage = () => {
                 </div>
                 <div class="form-container">
                     <form>
-                        <div class="msg"></div>
+                        <div style="display: ${display}" class="msg">${errorMessage}</div>
                         <label for="email">Enter Your email</label>
-                        <input type="email" id="email" name="email" placeholder="Please enter the email">
+                        <div class="msg-email"></div>
+                        <input type="email" id="email" name="email" placeholder="Please enter the email" required>
                         <label for="password">Enter Your password</label>
-                        <input type="password" id="password" name="password" placeholder="Please enter the password">
+                        <div class="msg-password"></div>
+                        <input type="password" id="password" name="password" placeholder="Please enter the password" required>
                         <div class="form-action">
                             <button onclick="event.preventDefault();onLogin()" type="submit">Sign in</button>
                         </div>
@@ -26,7 +41,19 @@ const loginPage = () => {
     `;
 };
 
-const registerPage = () => {
+const registerPage = (errorMessage) => {
+    if (localStorage.getItem("userToken")) {
+        router.navigate("/");
+    }
+    let display;
+    if (errorMessage) {
+        errorMessage = `Email đã tồn tại.`;
+        display = "block";
+    } else {
+        errorMessage = "";
+        display = "none";
+    }
+
     return `
     <div class="container">
         <div class="auth-page">
@@ -38,14 +65,18 @@ const registerPage = () => {
                 </div>
                 <div class="form-container">
                     <form>
+                        <div style="display:${display}" class="msg">${errorMessage}</div>
                         <label for="name">Enter Your name</label>
-                        <input type="text" id="name" name="name" placeholder="Please enter the name">
+                        <div class="msg-name"></div>
+                        <input type="text" id="name" name="name" placeholder="Please enter the name" required>
                         <label for="email">Enter Your email</label>
-                        <input type="email" id="email" name="email" placeholder="Please enter the email">
+                        <div class="msg-email"></div>
+                        <input type="email" id="email" name="email" placeholder="Please enter the email" required>
                         <label for="password">Enter Your password</label>
-                        <input type="password" id="password" name="password" placeholder="Please enter the password">
+                        <div class="msg-password"></div>
+                        <input type="password" id="password" name="password" placeholder="Please enter the password" required>
                         <div class="form-action">
-                            <button onclick="event.preventDefault();onRegister()" class="btn-register" type="submit">Sign up</button>
+                            <button onclick="event.preventDefault(); onRegister()" class="btn-register" type="submit">Sign up</button>
                         </div>
                     </form>
                 </div>
@@ -97,12 +128,29 @@ const homePage = async () => {
           </div>
           <div class="container">
             <div class="post-list">
-                <table>
-                    
+                <table border="1px">
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Action</th>
+                    </tr>
+                    ${posts
+                        .map(
+                            (post) => `<tr>
+                            <td>${post.id}</td>
+                            <td>${post.title}</td>
+                            <td>${post.content}</td>
+                            <td>
+                                <button class="edit-post"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button class="delete-post"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>`
+                        )
+                        .join("")}
                 </table>
             </div>
           </div>`;
-        getPostList();
         return html;
     } else {
         const newToken = await requestRefreshToken(

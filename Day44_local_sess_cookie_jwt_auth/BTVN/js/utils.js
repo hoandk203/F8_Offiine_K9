@@ -27,11 +27,12 @@ const requestRegister = async (endpoint, name, email, password) => {
             body: JSON.stringify({ name, email, password }),
         });
         if (!response.ok) {
-            throw new Error("Unauthorized");
+            const errorData = await response.json();
+            throw new Error(errorData.detail);
         }
         return response.json();
     } catch (error) {
-        console.log(error);
+        throw error;
     }
 };
 
@@ -45,11 +46,13 @@ const requestLogin = async (endpoint, email, password) => {
             body: JSON.stringify({ email, password }),
         });
         if (!response.ok) {
-            throw new Error("Unauthorized");
+            const errorData = await response.json();
+            throw new Error(errorData.detail);
         }
         return response.json();
     } catch (error) {
         console.log(error);
+        throw error;
     }
 };
 

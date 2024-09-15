@@ -1,25 +1,74 @@
 const onRegister = async () => {
+    const btnAuth = document.querySelector(".form-action button");
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const data = await requestRegister("master/user", name, email, password);
-    if (data) {
-        router.navigate("/login");
+
+    if (!name) {
+        document.querySelector(".msg-name").textContent =
+            "Vui lòng nhập tên bạn";
+    }
+    if (!email) {
+        document.querySelector(".msg-email").textContent =
+            "Vui lòng nhập email của bạn";
+    }
+    if (!password) {
+        document.querySelector(".msg-password").textContent =
+            "Vui lòng nhập mật khẩu của bạn";
+    } else if (!email.includes("@") || !email.includes(".com")) {
+        document.querySelector(".msg-email").textContent =
+            "Email không đúng định dạng";
+    } else if (name && email) {
+        try {
+            btnAuth.disabled = true;
+            btnAuth.textContent = "Loading...";
+            const data = await requestRegister(
+                "master/user",
+                name,
+                email,
+                password
+            );
+            console.log(data);
+            if (data) {
+                router.navigate("/login");
+            }
+        } catch (error) {
+            if (error.message === "Email already exists") {
+                app.innerHTML = registerPage(error.message);
+            }
+        }
     }
 };
 
 const onLogin = async () => {
+    const btnAuth = document.querySelector(".form-action button");
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
 
-    const data = await requestLogin("login", email, password);
-    if (data) {
-        localStorage.setItem("userToken", JSON.stringify(data));
-        router.navigate("/");
-    } else {
-        const msg = document.querySelector(".msg");
-        msg.style.display = "block";
-        msg.textContent = "Email hoặc mật khẩu không đúng";
+    if (!email) {
+        document.querySelector(".msg-email").textContent =
+            "Vui lòng nhập email của bạn";
+    }
+    if (!password) {
+        document.querySelector(".msg-password").textContent =
+            "Vui lòng nhập mật khẩu của bạn";
+    } else if (!email.includes("@") || !email.includes(".com")) {
+        document.querySelector(".msg-email").textContent =
+            "Email không đúng định dạng";
+    } else if (password) {
+        try {
+            btnAuth.disabled = true;
+            btnAuth.textContent = "Loading...";
+            const data = await requestLogin("login", email, password);
+            if (data) {
+                localStorage.setItem("userToken", JSON.stringify(data));
+                router.navigate("/");
+            }
+        } catch (error) {
+            if (error) {
+                app.innerHTML = loginPage(error.message);
+            }
+        }
     }
 };
 
