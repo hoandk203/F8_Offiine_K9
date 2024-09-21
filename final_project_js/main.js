@@ -6,7 +6,7 @@ import { render as createPostPage } from "./pages/post/createPost.js";
 import { render as updatePostPage } from "./pages/post/updatePost.js";
 
 const app = document.querySelector("#app");
-export const router = new Navigo("/");
+export const router = new Navigo("/", { hash: true });
 
 router.on({
     "/": function () {
