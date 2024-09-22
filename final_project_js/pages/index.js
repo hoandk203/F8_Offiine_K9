@@ -17,7 +17,7 @@ const tableContainer = `
     <div class="table-container w--1200 center">
         <div class="msg-success"></div>
         <h1>Your Posts</h1>
-        <button class="create-post-btn"><i class="fa-solid fa-plus"></i> Create Post</button>
+        <button class="create-post-page-btn"><i class="fa-solid fa-plus"></i> Create Post</button>
         <table class="w--full" cellspacing="0">
             <tr>
                 <th class="w--10">ID</th>
@@ -47,6 +47,9 @@ export async function render() {
         if (sessionStorage.getItem("msg_success") == "updatedPost") {
             msgType = "Sửa bài viết thành công!";
         }
+        if (sessionStorage.getItem("msg_success") == "deletedPost") {
+            msgType = "Xóa bài viết thành công!";
+        }
         msgSuccess.style.top = "-100px";
         msgSuccess.innerText = msgType;
         setTimeout(() => {
@@ -65,9 +68,11 @@ export async function render() {
     const logoutBtn = document.querySelector(".logout-btn");
     logoutBtn.addEventListener("click", onLogout);
 
-    document.querySelector(".create-post-btn").addEventListener("click", () => {
-        router.navigate("/post/0");
-    });
+    document
+        .querySelector(".create-post-page-btn")
+        .addEventListener("click", () => {
+            router.navigate("/post/0");
+        });
 }
 
 const getPosts = async () => {
@@ -113,9 +118,21 @@ const getPosts = async () => {
                     e.preventDefault();
                     const id = btn.previousElementSibling.dataset.id;
                     try {
-                        await deleteMethod(`post/${id}`);
-                        await render();
+                        e.target.disabled = true;
+                        e.target.innerHTML = `<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>`;
+                        const response = await deleteMethod(`post/${id}`);
+                        if (response) {
+                            sessionStorage.setItem(
+                                "msg_success",
+                                "deletedPost"
+                            );
+                            await render();
+                        }
                     } catch (error) {
+                        e.target.disabled = true;
+                        e.target.innerHTML = `<i class="fa-solid fa-trash"></i>`;
                         if (error.message === "token expired") {
                             const newToken = await renewToken();
 

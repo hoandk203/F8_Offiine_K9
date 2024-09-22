@@ -16,7 +16,7 @@ const createPostContainer = `<div class="create-post-container">
             <textarea rows="10" name="content" placeholder="Content..." required></textarea>
         </div>
         <div class="form-action">
-            <button type="submit" class="save-post-btn">Create</button>
+            <button type="submit" class="create-post-btn">Create</button>
             <button class="back-btn">Back to home</button>
         </div>
     </form>
@@ -35,8 +35,8 @@ export const render = () => {
         router.navigate("/");
     });
 
-    const savePostBtn = document.querySelector(".save-post-btn");
-    savePostBtn.addEventListener("click", (e) => onCreatePost(e));
+    const createPostBtn = document.querySelector(".create-post-btn");
+    createPostBtn.addEventListener("click", (e) => onCreatePost(e));
 };
 
 const onCreatePost = async (e) => {
@@ -48,12 +48,16 @@ const onCreatePost = async (e) => {
     const body = { title, content: contentinput };
 
     try {
+        e.target.disabled = true;
+        e.target.innerText = "Loading...";
         const response = await postMethod("post", body);
         if (response) {
             sessionStorage.setItem("msg_success", "createdPost");
             router.navigate("/");
         }
     } catch (error) {
+        e.target.disabled = false;
+        e.target.innerText = "Create";
         if (error.message === "token expired") {
             const newToken = await renewToken();
             localStorage.setItem("access_token", newToken.access);

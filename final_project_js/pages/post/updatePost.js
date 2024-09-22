@@ -30,6 +30,8 @@ const onUpdatePost = async (e, id) => {
         const content = document.querySelector(
             "textarea[name='content']"
         ).value;
+        e.target.disabled = true;
+        e.target.innerText = "Loading...";
         const response = await putMethod(`post/${id}`, { title, content });
 
         if (response) {
@@ -37,6 +39,8 @@ const onUpdatePost = async (e, id) => {
             router.navigate("/");
         }
     } catch (error) {
+        e.target.disabled = false;
+        e.target.innerText = "Update";
         if (error.message === "token expired") {
             const newToken = await renewToken();
 

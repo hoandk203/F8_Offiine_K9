@@ -141,7 +141,8 @@ button {
     color: white;
 }
 
-.create-post-btn {
+.create-post-btn,
+.create-post-page-btn {
     border: none;
     background-color: #2aae47;
     font-size: 1.6rem;
@@ -149,6 +150,9 @@ button {
     border-radius: 5px;
     color: white;
     float: right;
+}
+
+.create-post-page-btn {
     margin-bottom: 20px;
 }
 
