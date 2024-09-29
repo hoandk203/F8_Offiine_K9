@@ -1,0 +1,35 @@
+.user-table table th,
+.user-table table td {
+    padding: 10px;
+}
+
+.user-table {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.input-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.input-form form input,
+.input-form form button {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.input-form form button {
+    background-color: cornflowerblue;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.input-gender {
+    display: flex;
+    gap: 10px;
+}
