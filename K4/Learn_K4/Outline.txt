@@ -1,0 +1,210 @@
+
+Day42:functional component, useState, useEffect
+- useState[state, setState]= useState():
++ Lưu giá trị cuối cùng của biến kể cả khi re-render
++ Không cập nhật state ngay khi logic thay đổi state được thực hiện
++ Khi state thay đổi thì component re-render
+
+- useEffect(()=> , dependencies): Xử lý các công việc Side Effect ( việc bên lề, sau khi update UI)
++ Luồng: 1. State thay đổi -> 2. Re-render -> 3. UI update -> Callback trong useEffect hoạt động (nếu thỏa mãn điều kiện dependencies)
+
++ dependencies xảy ra các trường hợp:
+1. null hoặc undefined -> mỗi lần component re-render callback sẽ chạy
+2. [] -> component render lần đầu tiên callback sẽ chạy (chỉ chạy lần dầu)
+3. [var1, var2,...] -> 1 trong các biến trong dependencies thay đổi callback sẽ chạy
+
++ Đặc biệt:
+1. return một function trong useEffect với dependencies là [] thì logic trong function đó là Unmount
+useEffect(()=>{
+    return ()=>{
+        console.log("unmount")
+    }
+}, [])
+2. return một function trong useEffect với dependencies là [var1...] logic trong function đó là cleanup (nó sẽ cleanup của lần trước, rồi chạy logic trong useEffect của lần này sau)
+useEffect(()=>{
+    console.log("effect" + count);
+    return ()=>{
+        console.log("cleanup" + count)
+    }
+}, [count])
+
+Day43: useReducer, useContext
+- useReducer:
+const [state, dispatch] = useReducer(reducer, initialState)
+dispatch({ type: 'counter/incremented', payload: 1 });
+
+- useContext:
+import { createContext, useContext } from 'react';
+const ThemeContext = createContext(null); : khởi tạo đối tượng context
+<ThemeContext.Provider value="dark">
+   <Form />
+</ThemeContext.Provider> : bọc vào provider
+const theme = useContext(ThemeContext); trong <Form/> lấy dữ liệu từ đối tượng context
+
+Day44: Higher Order Component, memo, useRef, useMemo, useCallback
+- HOC để kế thừa logic của component
++ Cách thiết kế: tạo ra 1 component mới, nhận vào component ban đầu và trả về chính component đó. Nguyên lý của memo dựa vào HOC
+
+const color = (ParentComponent)=>{
+  const MyComponent= (props) => {
+    //logic random color (mỗi lần re-render sẽ ra một màu mới cho ParentComponent)
+    // tạo div bọc ParentComponent
+    // dùng css inline
+    return <ParentComponent {...props}/>
+  }
+  return MyComponent
+}
+
+-memo: để tránh re-render lại component không cần thiết ( chỉ khi prop thay đổi mới re-render)
+
+- useRef giống useState ở chỗ cũng lưu lại giá trị cuối cùng của 1 biến
+Nhưng khác ở chỗ:
+1. Nó không re-render, 
+2. Nó thay đổi ngay khi logic thay đổi nó thực hiện 
+3. Nó có thể tham chiếu đến một element để thao tác DOM
+
+- useMemo(()=> , []): cache giá trị để không tính toán lại khi re-render (chỉ tính toán lại khi dependencies thay đổi)
+
+- useCallback(()=> , []): cache một hàm để không khởi tạo lại hàm khi re-render (chỉ khởi tạo lại hàm đó khi dependencies thay đổi)
+
+Day45: useLayoutEffect, useTransition, Redux Core
+- useLayoutEffect: callback trong này chạy xong thì UI mới cập nhật
++ Dùng useEffect thì flow là:
+	1. state thay đổi
+	2. re-render
+	3. UI update
+	4. cleanup useEffect
+	5. Callback trong useEffect
++ Dùng useLayoutEffect thì flow là:
+	1. state thay đổi
+	2. re-render
+	3. cleanup useLayoutEffect
+	4. Callback trong useLayoutEffect
+	5. UI update
+
+- useTransition: delay quá trình cập nhật state để ưu tiên thao tác của người dùng
++ ví dụ chức năng tìm kiếm khi có nhiều dữ liệu, nếu bình thường vừa viết vừa re-render lại nguyên cái list dữ liệu thì thao tác gõ sẽ bị delay, lag. -> khi có useTransition sẽ ưu tiên cho gõ và dữ liệu state được thực hiện song song (gõ là việc của gõ, state vẫn cập nhật)
+
+- redux core:
+import {legacy_createStore as createStore} from 'redux';
+export const store= createStore(rootReducer) : truyền reducer vào để quản lý state global
+
+    <Provider store={store}>
+      <App />
+    </Provider>
+
+Day46: redux extension, redux core thunk, middleware redux toolkit(createAsyncThunk, builder)
+- redux extension: 
+1. cài extension redux devtools trên trình duyệt
+2. npm i @redux-devtools/extension (https://www.npmjs.com/package/@redux-devtools/extension)
+
+Day47: Cấu trúc file nextjs, tên folder [slug], [...slug], [[...slug]] tên folder ( ), đè layout (kế thừa layout gần nhất)
+- [slug] : sau / là 1 slug
+- [...slug] : sau / có thể có nhiều slug /do-gia-dung/noi-com/1
+- [[...slug]] : tương tự như trên nhưng slug có thể có hoặc không (cái trên buộc phải có slug)
+- ( ) : bỏ thành phần này trên url (admin)/login  thì trên url chỉ cần /login
+
+Day48: searchParams, usePathname, useRouter, new URLSearchParams, <Link/>, clsx, active Link, not-found.js, <Image/>, middleware (get, set headers | get, set cookie
+
+- searchParams là prop, gọi ra là một object. ?status=active&query=f8 => searchParams= {"status":"active", "query":"f8"}
+
+- useRouter(): có nhiều thao tác với url
+- new URLSearchParams: chuyển object thành search params {"status":"active", "query":"f8"}  =>  status=active&query=f8
+
+const pathname= usePathname()
+const router= useRouter()
+const url= `${pathname}?${new URLSearchParams(form)}`
+
+const handleSubmit= (e) =>{
+    e.preventDefault()
+    router.push(url)   // cập nhật url
+}
+
+- active Link: 
+	+ class .active{color:...}
+	+ function isActive(path) { if (path = pathname) return true}
+	+ class={ isActive(path) && "active" }
+
+- clsx()
+	+ clsx('p-4 border', isError ? 'border-red-500' : 'border-gray-300'); 
+// Kết quả: 'p-4 border border-red-500'
+	+ clsx('btn', {'btn-active': true, 'btn-disabled': false });
+
+- not-found.js tạo thẳng trong app
+
+- middleware.js : tạo trong folder src
++ life cycle: request -> middleware -> route -> RootLayout -> Custom layout -> page -> response (html, json, image...)
++ startWith: request.nextUrl.pathname.startsWith('/about')
++ NextResponse.redirect(): nhận vào url đầy đủ
+
++ request. : thao tác được với request
++ NextResponse.next(): thao tác được các thông tin response: status, header...
+
++ response.cookies.set({
+    name: 'phone',
+    value: '0842',
+    path: '/',
+    httpOnly,
+    maxAge: 86400, //giây
+  }) // có response.cookies.delete("phone")
++ thuộc tính httpOnly của cookie ý là chỉ server mới can thiệp được cookie đó
+
+Day49: fetch với server component, caching, server action, route handler
+
+- client side không cho hàm default là async nên phải dùng useEffect, nhưng server side cho phép hàm default là hàm async nên có thể fetch api rồi gọi luôn
+
+- router = useRouter(); router.refresh() : refresh sau khi call api, để refesh cho dữ liệu hiển thị ra, vì server không re-render bằng state được
+
+- caching: next tự sinh ra bộ nhớ đệm để cache lại dữ liệu fetch lần trước đó, tránh việc gọi lên server quá nhiều
+	+ revalidate: thiết lập thời gian cache
+	+ revalidatePath("/path"): xóa cache của trang cụ thể
+	+ revalidateTag: xóa theo tag, phải gắn tags cho hàm fetch muốn xóa
+
+- từ client gọi đến server action thì action phải ở file khác và có "use server" ở đầu file
++ từ server gọi đến server action thì "use server" nằm ở đầu hàm action đấy
+
+- cookie().set("title", title) : có thể set cookie
+
+- ở server side không có usePathname() nên có const path= headers().get("next-url")
+
+- xóa form ở server bằng useRef -> formRef.current.reset()
+
+- route handler: tạo api 
+
+Day50: SWR trong nextjs, case nhận biết online, offline
+
+- useSwr(api, fetcher) : fetch data phía client mà không cần state và useEffect
+	+ mutate (2 loại global, bound): cập nhật dữ liệu cache của swr, tái fetch api
+	+ auto focus revalidation (mặc định true của swr): dữ liệu tab này thay đổi, chỉ cần focus sang tab kia thì nó cũng đồng bộ luôn
+	+ refreshInterval: swr fetch dữ liệu theo thời gian mình đặt
+	+ revalidateOnReconnect (mặc định true)
+
+- case nhận biết online, offline: sử dụng window.addEventListener("online/offline")
+
+Day51: case chọn tỉnh thành, quận huyện, giới thiệu project cuối fontend, cách để cha là client gọi con là server
+
+- case chọn tỉnh thành, quận huyện: viết api bằng route handler, swr call api trả ra select
+
+- cách để cha là client gọi con là server: client không gọi trực tiếp được server, xử lý bằng cách sử dụng children
+
+Day52: .module.css , config component Image, config metadata, generateMetadata, hàm notFound có sẵn, lấy pathname khi đang ở server side, config rewrites, lỗi khi build
+
+- .module.css + clsx : tránh conflict tên class
+- cài tailwindcss
+- sau url origin / sẽ vào thư mục public : localhost:3000/next.svg sẽ ra cái ảnh trong public
+- component Image không cho lấy src ảnh bên ngoài tên miền của project. hướng dẫn cách config để ảnh có thể truy cập từ hostname được config
+
+- lấy pathname khi đang ở server side: 
+1.sử dụng middleware
+const response= NextResponse.next()
+const pathname = request.nextUrl.pathname
+response.headers.set("x-pathname", pathname)
+return response
+-> trong server component: const pathname= headers().get("x-pathname")
+
+2. sửa next.config
++ next.config thêm headers
+
+- next config thêm rewrites(sửa url truy cập mà không cần sửa tên folder): next config rewrites
+
+- lỗi khi build: next config thêm swcMinify: false

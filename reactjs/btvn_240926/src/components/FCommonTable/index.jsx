@@ -1,57 +1,81 @@
-const FCommonTable = ({ columns, rows, onUpdate, onDelete }) => {
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import "../../index.css";
+import style from "./style.module.css";
+const FCommonTable = ({ columns, rows, onUpdate, onDelete, maxWidth }) => {
     return (
         <>
-            <div className="user-table">
-                <table
-                    style={{ width: "100%" }}
-                    border={1}
-                    cellPadding={0}
-                    cellSpacing={0}
-                >
-                    <thead>
-                        <tr>
+            <TableContainer
+                sx={{ maxWidth: maxWidth, margin: "0 auto" }}
+                component={Paper}
+            >
+                <Table aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
                             {columns.map((column) => (
-                                <th key={column}>{column}</th>
+                                <TableCell
+                                    key={column.name}
+                                    width={column?.width}
+                                    className={style["text--red"]}
+                                >
+                                    {column.text}
+                                </TableCell>
                             ))}
-                        </tr>
-                    </thead>
-                    <tbody>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
                         {rows.map((row, ridx) => {
                             return (
-                                <tr key={`${ridx}`}>
+                                <TableRow key={`${row.id}`}>
                                     {columns.map((column) => {
-                                        if (column === "action") {
+                                        if (column.name === "action") {
                                             return (
-                                                <td key={`${ridx}${column}`}>
-                                                    <button
-                                                        onClick={(e) => {
-                                                            onUpdate(e, row);
+                                                <TableCell
+                                                    key={`${row.id}${column.name}`}
+                                                >
+                                                    <EditIcon
+                                                        sx={{
+                                                            color: "green",
                                                         }}
-                                                    >
-                                                        Edit
-                                                    </button>
-                                                    <button
                                                         onClick={(e) => {
-                                                            onDelete(e, row.id);
+                                                            onUpdate(row);
                                                         }}
-                                                    >
-                                                        Delete
-                                                    </button>
-                                                </td>
+                                                        className="pointer"
+                                                    />
+                                                    <DeleteIcon
+                                                        sx={{
+                                                            color: "red",
+                                                        }}
+                                                        onClick={(e) => {
+                                                            onDelete(row.id);
+                                                        }}
+                                                        className="pointer"
+                                                    />
+                                                </TableCell>
                                             );
                                         }
                                         return (
-                                            <td key={`${ridx}${column}`}>
-                                                {row[column]}
-                                            </td>
+                                            <TableCell
+                                                key={`${row.id}${column.name}`}
+                                            >
+                                                {row[column.name]}
+                                            </TableCell>
                                         );
                                     })}
-                                </tr>
+                                </TableRow>
                             );
                         })}
-                    </tbody>
-                </table>
-            </div>
+                    </TableBody>
+                </Table>
+            </TableContainer>
         </>
     );
 };

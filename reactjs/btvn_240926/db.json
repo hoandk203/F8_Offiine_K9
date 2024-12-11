@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "categoryId": "1",
+      "name": "áo thun",
+      "orderNum": 1
+    },
+    {
+      "id": "2",
+      "categoryId": "1",
+      "name": "áo phông",
+      "orderNum": 2
+    },
+    {
+      "id": "3",
+      "categoryId": "2",
+      "name": "iphone 16",
+      "orderNum": 1
+    },
+    {
+      "id": "f8d09eeb-b97e-4a3a-ab6e-1249154a142b",
+      "name": "Hoàn",
+      "categoryId": "1",
+      "orderNum": "1"
+    },
+    {
+      "id": "f8d09eeb-b97e-4a3a-ab6e-1249154a142b",
+      "name": "Hoàn",
+      "categoryId": "12",
+      "orderNum": "1"
+    },
+    {
+      "id": "f8d09eeb-b97e-4a3a-ab6e-1249154a142b",
+      "name": "Hoàn",
+      "categoryId": "12",
+      "orderNum": "1333"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "quần áo",
+      "orderNum": 1
+    },
+    {
+      "id": "2",
+      "name": "điện tử",
+      "orderNum": 3
+    },
+    {
+      "id": "3",
+      "name": "đồ ăn",
+      "orderNum": 2
+    }
+  ]
+}

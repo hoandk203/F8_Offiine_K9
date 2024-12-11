@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/K4/BTVN_K4/btvn41_todolist" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/K4/BTVN_K4/btvn43_shop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/K4/BTVN_K4/btvn44_auth0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docker/k9-backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docker/k9-backend/api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/f8-k9-final-project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/final_project_js" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nextjs/btvn56_productdetail_next" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/7 VIDEO RIÊNG/react_folder_base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/7 VIDEO RIÊNG/react_router_dom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/BTVN_Clone/f8-k9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/BTVN_Clone/f8-k9/react240923" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/btvn52_store" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/btvn54_reduxCore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/btvn_240926" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/btvn_241010_todolist" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/btvn_reactjs01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reactjs/react_redux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/typescript" vcs="Git" />
+  </component>
+</project>

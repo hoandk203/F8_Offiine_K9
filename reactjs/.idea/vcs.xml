@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/7 VIDEO RIÊNG/react_folder_base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/7 VIDEO RIÊNG/react_router_dom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BTVN_Clone/f8-k9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BTVN_Clone/f8-k9/react240923" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/btvn52_store" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/btvn54_reduxCore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/btvn_240926" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/btvn_241010_todolist" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/btvn_reactjs01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react_redux" vcs="Git" />
+  </component>
+</project>

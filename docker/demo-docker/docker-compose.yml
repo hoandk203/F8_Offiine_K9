@@ -1,0 +1,9 @@
+services:
+  docker-test:
+    container_name: docker-test
+    build: /docker-test
+    volumes:
+      - './docker-test:/app/docker-test'
+    ports:
+      - '3002:5173'
+    command: ["npm", "run", "dev", "--", "--host"]

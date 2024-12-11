@@ -1,34 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.list {
+    background: #4286f4;
+    width: 500px;
+    padding: 1rem;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    margin: 0;
-    padding: 0;
+.list-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-.module {
-    background-color: #ff6f00 !important;
-    font-weight: bold;
+.ghost {
+    opacity: 0.4;
 }
 
-.container {
-    width: 50%;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #4286f4;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.list-item {
+    background: #8bb3f4;
+    padding: 0.5rem;
+    border: 1px solid white;
+    margin: 1px 0;
 }
-.lesson {
-    background-color: #8bb3f4;
-    color: #000000;
-    padding: 10px;
-    border: 2px solid #ffffff;
-    user-select: none;
+
+.placeholder {
+    display: none;
+    background: #303742;
+    pointer-events: none;
+}
+
+.list-item.active {
+    background: rgb(255, 111, 0);
 }

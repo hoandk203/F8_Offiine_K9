@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.w-full {
+    width: 100% !important;
+}

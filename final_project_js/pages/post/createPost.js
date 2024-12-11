@@ -7,6 +7,7 @@ import { renewToken } from "../../utils";
 const createPostContainer = `<div class="create-post-container">
 <form>
     <h1>Create Post</h1>
+        <div class="msg none"></div>
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" placeholder="Title..." required>
@@ -41,28 +42,38 @@ export const render = () => {
 
 const onCreatePost = async (e) => {
     e.preventDefault();
+    let isValid = true;
     const title = document.querySelector("input[name='title']").value;
     const contentinput = document.querySelector(
         "textarea[name='content']"
     ).value;
-    const body = { title, content: contentinput };
+    const msg = document.querySelector(".msg");
+    const body = {
+        title: title.replace("<", "&lt;").replace(">", "&gt;"),
+        content: contentinput.replace("<", "&lt;").replace(">", "&gt;"),
+    };
 
-    try {
-        e.target.disabled = true;
-        e.target.innerText = "Loading...";
-        const response = await postMethod("post", body);
-        if (response) {
-            sessionStorage.setItem("msg_success", "createdPost");
-            router.navigate("/");
-        }
-    } catch (error) {
-        e.target.disabled = false;
-        e.target.innerText = "Create";
-        if (error.message === "token expired") {
-            const newToken = await renewToken();
-            localStorage.setItem("access_token", newToken.access);
-            localStorage.setItem("refresh_token", newToken.refresh);
-            onCreatePost(e);
+    if (!title || !contentinput) {
+        isValid = false;
+        msg.style.display = "block";
+        msg.innerHTML = `<span>Vui lòng điền đầy đủ thông tin.</span>`;
+    }
+    if (isValid) {
+        try {
+            const response = await postMethod("post", body);
+            if (response) {
+                sessionStorage.setItem("msg_success", "createdPost");
+                router.navigate("/");
+            }
+        } catch (error) {
+            e.target.disabled = false;
+            e.target.innerText = "Create";
+            if (error.message === "token expired") {
+                const newToken = await renewToken();
+                localStorage.setItem("access_token", newToken.access);
+                localStorage.setItem("refresh_token", newToken.refresh);
+                onCreatePost(e);
+            }
         }
     }
 };

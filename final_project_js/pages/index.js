@@ -21,9 +21,9 @@ const tableContainer = `
         <table class="w--full" cellspacing="0">
             <tr>
                 <th class="w--10">ID</th>
-                <th class="w--20">Title</th>
+                <th class="w--30">Title</th>
                 <th class="w--50">Content</th>
-                <th>Action</th>
+                <th class="w--10">Action</th>
             </tr>
         </table>
     </div>
@@ -93,7 +93,11 @@ const getPosts = async () => {
                 })
                 .join("");
             const table = document.querySelector(".table-container table");
-            table.innerHTML += postsList;
+            if (!postsList) {
+                table.innerHTML = `<span>Bạn chưa có bài viết nào. Hãy tạo bài viết nhé.</span>`;
+            } else {
+                table.innerHTML += postsList;
+            }
 
             // EDIT BTN
 
@@ -118,9 +122,9 @@ const getPosts = async () => {
                     e.preventDefault();
                     const id = btn.previousElementSibling.dataset.id;
                     try {
-                        e.target.disabled = true;
-                        e.target.innerHTML = `<div class="spinner-border text-light" role="status">
-  <span class="visually-hidden">Loading...</span>
+                        btn.disabled = true;
+                        btn.innerHTML = `<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden"></span>
 </div>`;
                         const response = await deleteMethod(`post/${id}`);
                         if (response) {
@@ -131,8 +135,8 @@ const getPosts = async () => {
                             await render();
                         }
                     } catch (error) {
-                        e.target.disabled = true;
-                        e.target.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+                        btn.disabled = false;
+                        btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
                         if (error.message === "token expired") {
                             const newToken = await renewToken();
 

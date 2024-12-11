@@ -14,8 +14,8 @@ let gameIncorrect = 0;
 
 const renderContent = async () => {
     renderLoading();
-    currentQuestion = Math.ceil(Math.random() * totalQuestions);
 
+    currentQuestion = Math.ceil(Math.random() * totalQuestions);
     const randomQuestion = () => {
         if (!questionNumberArray.includes(currentQuestion)) {
             questionNumberArray.push(currentQuestion);

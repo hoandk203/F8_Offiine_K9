@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 } from "uuid";
+import "../../assets/css/inputForm.css";
 
 export default function InputForm({ onInput, onSubmit, user, users }) {
     return (

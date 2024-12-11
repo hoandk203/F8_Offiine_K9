@@ -8,6 +8,7 @@ import { renewToken } from "../../utils";
 const createPostContainer = `<div class="create-post-container">
 <form>
     <h1>Update Post</h1>
+        <div class="msg none"></div>
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" placeholder="Title..." required>
@@ -25,28 +26,38 @@ const createPostContainer = `<div class="create-post-container">
 
 const onUpdatePost = async (e, id) => {
     e.preventDefault();
-    try {
-        const title = document.querySelector("input[name='title']").value;
-        const content = document.querySelector(
-            "textarea[name='content']"
-        ).value;
-        e.target.disabled = true;
-        e.target.innerText = "Loading...";
-        const response = await putMethod(`post/${id}`, { title, content });
+    let isValid = true;
+    const title = document.querySelector("input[name='title']").value;
+    const content = document.querySelector("textarea[name='content']").value;
+    const msg = document.querySelector(".msg");
+    if (!title || !content) {
+        isValid = false;
+        msg.style.display = "block";
+        msg.innerHTML = `<span>Vui lòng điền đầy đủ thông tin.</span>`;
+    }
+    if (isValid) {
+        try {
+            e.target.disabled = true;
+            e.target.innerText = "Loading...";
+            const response = await putMethod(`post/${id}`, {
+                title: title.replace("<", "&lt;").replace(">", "&gt;"),
+                content: content.replace("<", "&lt;").replace(">", "&gt;"),
+            });
 
-        if (response) {
-            sessionStorage.setItem("msg_success", "updatedPost");
-            router.navigate("/");
-        }
-    } catch (error) {
-        e.target.disabled = false;
-        e.target.innerText = "Update";
-        if (error.message === "token expired") {
-            const newToken = await renewToken();
+            if (response) {
+                sessionStorage.setItem("msg_success", "updatedPost");
+                router.navigate("/");
+            }
+        } catch (error) {
+            e.target.disabled = false;
+            e.target.innerText = "Update";
+            if (error.message === "token expired") {
+                const newToken = await renewToken();
 
-            localStorage.setItem("access_token", newToken.access);
-            localStorage.setItem("refresh_token", newToken.refresh);
-            onUpdatePost(e, id);
+                localStorage.setItem("access_token", newToken.access);
+                localStorage.setItem("refresh_token", newToken.refresh);
+                onUpdatePost(e, id);
+            }
         }
     }
 };

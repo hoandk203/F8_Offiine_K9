@@ -91,15 +91,15 @@ const onRegister = async (e) => {
             msgEmail.style.display = "block";
             msgEmail.innerHTML = `<span>Vui lòng nhập đúng định dạng email.</span>`;
         }
-        if (password.length < 8) {
+        if (password.length < 8 || password.length > 14) {
             isValid = false;
             msgPassword.style.display = "block";
-            msgPassword.innerHTML = `<span>Password không ít hơn 8 ký tự.</span>`;
+            msgPassword.innerHTML = `<span>Password lớn hơn 8 và nhỏ hơn 14 ký tự.</span>`;
         }
-        if (username.length < 8) {
+        if (username.length < 8 || username.length > 30) {
             isValid = false;
             msgUsername.style.display = "block";
-            msgUsername.innerHTML = `<span>Username không ít hơn 8 ký tự.</span>`;
+            msgUsername.innerHTML = `<span>Username lớn hơn 8 và nhỏ hơn 30 ký ký tự.</span>`;
         }
     }
     if (isValid) {
@@ -114,6 +114,8 @@ const onRegister = async (e) => {
             const response = await postMethod("master/user", body);
             if (response) {
                 sessionStorage.setItem("msg_success", "registered");
+                sessionStorage.setItem("emailRegistered", `${email}`);
+                sessionStorage.setItem("passwordRegistered", `${password}`);
                 router.navigate("/login");
             }
         } catch (error) {
